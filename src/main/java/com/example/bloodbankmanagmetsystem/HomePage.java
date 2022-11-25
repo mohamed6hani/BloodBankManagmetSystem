@@ -17,10 +17,11 @@ public class HomePage extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+
         System.out.println("Done!");
         System.out.println("Trying2!");
         System.out.println("Done2!");
+        launch();
 
     }
 }
