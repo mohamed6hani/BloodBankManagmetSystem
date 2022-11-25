@@ -20,6 +20,7 @@ public class HomePage extends Application {
         launch();
         System.out.println("Done!");
         System.out.println("Trying2!");
+        System.out.println("Done2!");
 
     }
 }
