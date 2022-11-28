@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+      prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1">
+   <AnchorPane prefHeight="404.0" prefWidth="600.0">
+      <ImageView fitHeight="400.0" fitWidth="608.0" layoutX="-6.0">
+
+      </ImageView>
+      <Button layoutX="245.0" layoutY="323.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="138.0"
+              text="Log In"/>
+      <Button layoutX="28.0" layoutY="348.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" text="Back"/>
+      <Label layoutX="170.0" layoutY="182.0" prefHeight="36.0" prefWidth="85.0" text="Username:">
+         <font>
+            <Font size="18.0"/>
+         </font>
+      </Label>
+      <TextField layoutX="265.0" layoutY="187.0" prefHeight="25.0" prefWidth="166.0"/>
+      <Label layoutX="170.0" layoutY="238.0" prefHeight="36.0" prefWidth="85.0" text="Password: ">
+         <font>
+            <Font size="18.0"/>
+         </font>
+      </Label>
+      <PasswordField layoutX="265.0" layoutY="244.0" prefHeight="25.0" prefWidth="166.0"/>
+      <ProgressBar layoutX="214.0" layoutY="291.0" prefWidth="200.0" progress="0.0"/>
+      <ImageView fitHeight="189.0" fitWidth="458.0" layoutX="71.0">
+
+      </ImageView>
+   </AnchorPane>
+</VBox>
