@@ -7,12 +7,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="421.0" prefWidth="649.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.sceneController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="421.0" prefWidth="649.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.sceneController">
    <AnchorPane prefHeight="328.0" prefWidth="566.0" style="-fx-background-color: pink;">
       <ImageView fitHeight="435.0" fitWidth="671.0" layoutX="-11.0" layoutY="-3.0">
          <Image url="@anPics/Background3.JPG" />
       </ImageView>
-      <Button layoutX="274.0" layoutY="231.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="105.0" text="Admin">
+      <Button layoutX="274.0" layoutY="231.0" mnemonicParsing="false" onAction="#switchLoginPage" prefHeight="29.0" prefWidth="105.0" text="Admin">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -22,7 +22,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="274.0" layoutY="358.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="105.0" text="Donor/User">
+      <Button layoutX="274.0" layoutY="358.0" mnemonicParsing="false" onAction="#switchLoginPage" prefHeight="29.0" prefWidth="105.0" text="Donor/User">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
