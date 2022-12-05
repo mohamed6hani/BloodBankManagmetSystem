@@ -22,7 +22,7 @@
          <Image url="@pics/Logo3.png" />
       </ImageView>
       <Button layoutX="245.0" layoutY="323.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="138.0" text="Log In" />
-      <Button layoutX="28.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchLoginPage" prefHeight="25.0" prefWidth="74.0" text="Back" />
+      <Button layoutX="28.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchDoctorLogin0" prefHeight="25.0" prefWidth="74.0" text="Back" />
       <Label layoutX="186.0" layoutY="182.0" prefHeight="36.0" prefWidth="57.0" text="Email :">
          <font>
             <Font size="14.0" />
@@ -43,5 +43,10 @@
             <Cursor fx:constant="MOVE" />
          </cursor>
       </ProgressBar>
+      <Label layoutX="273.0" layoutY="14.0" prefHeight="50.0" prefWidth="82.0" text="Doctor" textFill="#a40d0d">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
    </AnchorPane>
 </VBox>

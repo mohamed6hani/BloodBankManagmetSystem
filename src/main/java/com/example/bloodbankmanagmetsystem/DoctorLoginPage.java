@@ -20,6 +20,7 @@ public class DoctorLoginPage extends Application {
         Stage stage = new Stage();
         stage.setTitle("Doctor Login Page");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 }

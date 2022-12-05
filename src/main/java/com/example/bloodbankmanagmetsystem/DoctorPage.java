@@ -12,6 +12,7 @@ public class DoctorPage extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("DoctorPage");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 }

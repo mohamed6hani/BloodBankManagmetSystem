@@ -13,11 +13,12 @@ public class IdentifyPage extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Identify");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 
     public static void main(String[] args) {
         launch();
     }
-}
 
+}

@@ -5,7 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
-
 public class HomePage extends Application {
     @Override
     public void start(Stage stage) throws IOException {
@@ -13,6 +12,7 @@ public class HomePage extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("BloodPoint");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 
