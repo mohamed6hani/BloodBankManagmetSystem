@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -22,20 +23,20 @@ public class sceneController{
     public TextArea tracePdf;
     public ImageView myProfileA;
     public TextArea tracePdfA;
+    public Button Login;
     private Stage stage;
     private Scene scene;
 
-
-        public void switchToIdentify(ActionEvent event) throws IOException {
-        Parent fxmlLoader = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("IdentifyPage.fxml"))));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(fxmlLoader);
-        stage.setScene(scene);
-        stage.setResizable(false);
-        stage.show();
-    }
+    public void switchToIdentify(ActionEvent event) throws IOException {
+    Parent fxmlLoader = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("IdentifyPage.fxml"))));
+    stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+    scene = new Scene(fxmlLoader);
+    stage.setScene(scene);
+    stage.setResizable(false);
+    stage.show();
+}
     public void switchToHome(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("homePage.fxml"))));
+        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("HomePage.fxml"))));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -60,6 +61,14 @@ public class sceneController{
     }
     public void switchUserLogin0(ActionEvent event) throws IOException, NullPointerException{
         Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("UserLogin0.fxml"))));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }
+    public void switchUserLogin(ActionEvent event) throws IOException, NullPointerException{
+        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("User Login Page.fxml"))));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

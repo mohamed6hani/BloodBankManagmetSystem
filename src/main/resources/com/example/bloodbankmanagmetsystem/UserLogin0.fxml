@@ -8,17 +8,17 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.sceneController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="638.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.sceneController">
    <AnchorPane prefHeight="395.0" prefWidth="618.0">
       <ImageView fitHeight="400.0" fitWidth="638.0">
          <Image url="@anPics/Background3.JPG" />
       </ImageView>
-      <Button fx:id="Login" layoutX="212.0" layoutY="264.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="209.0" text="Login">
+      <Button layoutX="212.0" layoutY="264.0" mnemonicParsing="false" onAction="#switchUserLogin" prefHeight="32.0" prefWidth="209.0" text="Login">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="CA" layoutX="213.0" layoutY="310.0" mnemonicParsing="false" onAction="#switchToUserCreateAccount" prefHeight="35.0" prefWidth="209.0" text="Create Account">
+      <Button layoutX="213.0" layoutY="310.0" mnemonicParsing="false" onAction="#switchToUserCreateAccount" prefHeight="35.0" prefWidth="209.0" text="Create Account">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -31,7 +31,7 @@
       <ImageView fitHeight="211.0" fitWidth="525.0" layoutX="67.0" layoutY="42.0">
          <Image url="@pics/Logo3.png" />
       </ImageView>
-      <Label layoutX="307.0" layoutY="68.0" prefHeight="50.0" prefWidth="82.0" text="User" textFill="#a40d0d">
+      <Label layoutX="307.0" layoutY="68.0" prefHeight="50.0" prefWidth="57.0" text="User" textFill="#a40d0d">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>

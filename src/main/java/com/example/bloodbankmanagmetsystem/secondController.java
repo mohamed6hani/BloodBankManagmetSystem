@@ -8,14 +8,19 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class secondController implements Initializable {
+
+    public ImageView myProfileU;
     @FXML
     private ChoiceBox<String> bloodTypeBox;
     @FXML
@@ -37,5 +42,16 @@ public class secondController implements Initializable {
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
+    }
+
+    @FXML
+
+    public void singleFileUploadUser() throws FileNotFoundException {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Pictures", "*.jpg", "*.jpeg", "*.PNG"));
+        File file = fileChooser.showOpenDialog(null);
+        InputStream image1 = new FileInputStream(String.valueOf(file));
+        Image image = new Image(image1);
+        myProfileU.setImage(image);
     }
 }
