@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="787.0" scaleShape="false" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.sceneController">
+<VBox fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="787.0" scaleShape="false" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.sceneController">
    <AnchorPane focusTraversable="true" prefHeight="528.0" prefWidth="796.0" scaleShape="false">
       <ImageView fitHeight="524.0" fitWidth="787.0" layoutY="4.0">
          <Image url="@anPics/Background3.JPG" />
@@ -43,7 +43,7 @@
       <Button layoutX="354.0" layoutY="392.0" mnemonicParsing="false" onAction="#singleFileUploadDoctor" prefHeight="25.0" prefWidth="91.0" text="Upload" />
       <TextArea fx:id="tracePdf" blendMode="MULTIPLY" cache="true" editable="false" layoutX="551.0" layoutY="328.0" prefHeight="57.0" prefWidth="200.0" scaleShape="false" />
       <ImageView fx:id="myProfile" fitHeight="150.0" fitWidth="164.0" layoutX="312.0" layoutY="230.0">
-         <Image url="@pics/Profile%20Picture1.jpg"/>
+         <Image url="@pics/Profile%20Picture1.jpg" />
       </ImageView>
    </AnchorPane>
 </VBox>

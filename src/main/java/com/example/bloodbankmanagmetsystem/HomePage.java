@@ -8,7 +8,7 @@ import java.io.IOException;
 public class HomePage extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HomePage.class.getResource("homePage.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HomePage.class.getResource("HomePage.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("BloodPoint");
         stage.setScene(scene);
