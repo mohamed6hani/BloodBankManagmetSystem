@@ -9,6 +9,7 @@ module com.example.bloodbankmanagmetsystem {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.sql;
 
     opens com.example.bloodbankmanagmetsystem to javafx.fxml;
     exports com.example.bloodbankmanagmetsystem;

@@ -1,16 +1,29 @@
 package com.example.bloodbankmanagmetsystem;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.*;
 
 import java.io.IOException;
+import java.net.URL;
+import java.sql.Statement;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
-public class sceneController {
+public class sceneController implements Initializable {
     private Stage stage;
     private Scene scene;
 
@@ -63,5 +76,61 @@ public class sceneController {
 
     public void Quit() {
         System.exit(0);
+    }
+
+
+
+    //salma
+
+    @FXML
+    private Button login;
+
+    @FXML
+    private Label invalidLabel;
+    @FXML
+    private TextField login_email;
+    @FXML
+    private PasswordField login_password;
+    public void login_setOnAction(ActionEvent event) {
+        if(login_email.getText().isBlank() ==false && login_password.getText().isBlank() ==false ){
+            validateLogin();
+        }
+        else{
+            invalidLabel.setText("Please enter email and password");
+        }
+    }
+
+    public void validateLogin (){
+        
+
+        String verifyLogin = "SELECT count(1) FROM Doctor WHERE Doctor_email = '" + login_email.getText() +  "' AND Doctor_password = '" + login_password.getText() + "'";
+        DB db = new DB();
+        Connection con = db.getConnection();
+
+
+        try {
+                Statement stmt = con.createStatement();
+                ResultSet queryResult = stmt.executeQuery(verifyLogin);
+
+                while(queryResult.next()){
+                    if(queryResult.getInt( 1) == 1){
+                        invalidLabel.setText("Successful Login!");
+                    }
+                    else {
+                        invalidLabel.setText("Invalid Email or Password, Please try again.");
+                    }
+                }
+
+
+        } catch (Exception e){
+            e.printStackTrace();
+            e.getCause();
+       }
+    }
+
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
     }
 }
