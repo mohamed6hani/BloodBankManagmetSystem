@@ -136,7 +136,6 @@ public class sceneController{
 
         String fileNames = file.getName();
         tracePdf.setText(fileNames);
-
     }
     public void multiFileUploadAdmin(){
         FileChooser fileChooser = new FileChooser();
