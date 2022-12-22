@@ -13,38 +13,38 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="714.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.secondController">
-   <AnchorPane prefHeight="480.0" prefWidth="714.0">
-      <ImageView fitHeight="475.0" fitWidth="714.0">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="515.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.secondController">
+   <AnchorPane prefHeight="480.0" prefWidth="478.0">
+      <ImageView fitHeight="406.0" fitWidth="515.0">
          <Image url="@anPics/Background3.JPG" />
       </ImageView>
       <ImageView fitHeight="145.0" fitWidth="309.0" layoutX="137.0">
          <Image url="@pics/Logo3.png" />
       </ImageView>
-      <Label layoutX="68.0" layoutY="145.0" text="Name" />
-      <Label layoutX="69.0" layoutY="192.0" text="National ID" />
-      <Label layoutX="69.0" layoutY="237.0" text="Email" />
-      <Label layoutX="68.0" layoutY="289.0" text="Password" />
-      <Label layoutX="294.0" layoutY="281.0" text="Birthdate" />
-      <Label layoutX="299.0" layoutY="167.0" text="Gender" />
-      <Label layoutX="294.0" layoutY="229.0" text="Phone Number" />
-      <TextField layoutX="69.0" layoutY="163.0" />
-      <TextField layoutX="69.0" layoutY="209.0" />
-      <TextField layoutX="69.0" layoutY="254.0" />
-      <PasswordField layoutX="69.0" layoutY="306.0" />
-      <TextField layoutX="294.0" layoutY="246.0" />
-      <Label layoutX="544.0" layoutY="124.0" prefHeight="27.0" prefWidth="111.0" text="Profile Photo">
+      <Label layoutX="30.0" layoutY="144.0" text="Name" />
+      <Label layoutX="31.0" layoutY="191.0" text="National ID" />
+      <Label layoutX="31.0" layoutY="236.0" text="Email" />
+      <Label layoutX="30.0" layoutY="288.0" text="Password" />
+      <Label layoutX="205.0" layoutY="243.0" text="Birthdate" />
+      <Label layoutX="205.0" layoutY="164.0" text="Gender" />
+      <Label layoutX="204.0" layoutY="190.0" text="Phone Number" />
+      <TextField layoutX="31.0" layoutY="162.0" />
+      <TextField layoutX="31.0" layoutY="208.0" />
+      <TextField layoutX="31.0" layoutY="253.0" />
+      <PasswordField layoutX="31.0" layoutY="305.0" />
+      <TextField layoutX="204.0" layoutY="215.0" />
+      <Label layoutX="391.0" layoutY="139.0" prefHeight="27.0" prefWidth="111.0" text="Profile Photo">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Button layoutX="544.0" layoutY="331.0" mnemonicParsing="false" onAction="#singleFileUploadUser" prefHeight="25.0" prefWidth="91.0" text="Upload" />
-      <DatePicker layoutX="294.0" layoutY="306.0" />
-      <Button layoutX="276.0" layoutY="402.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" text="Create Account" />
-      <Button layoutX="32.0" layoutY="427.0" mnemonicParsing="false" onAction="#switchUserLogin0" prefHeight="25.0" prefWidth="74.0" text="Back" />
-      <ProgressBar layoutX="238.0" layoutY="371.0" prefWidth="200.0" progress="0.0" />
-      <ChoiceBox fx:id="genderBox" layoutX="357.0" layoutY="163.0" prefHeight="25.0" prefWidth="74.0" />
-      <ImageView fx:id="myProfileU" fitHeight="145.0" fitWidth="149.0" layoutX="525.0" layoutY="162.0">
+      <Button layoutX="401.0" layoutY="284.0" mnemonicParsing="false" onAction="#singleFileUploadUser" prefHeight="25.0" prefWidth="91.0" text="Upload" />
+      <DatePicker layoutX="205.0" layoutY="260.0" />
+      <Button layoutX="223.0" layoutY="319.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" text="Create Account" />
+      <Button layoutX="18.0" layoutY="357.0" mnemonicParsing="false" onAction="#switchUserLogin0" prefHeight="25.0" prefWidth="74.0" text="Back" />
+      <ProgressBar layoutX="192.0" layoutY="360.0" prefWidth="200.0" progress="0.0" />
+      <ChoiceBox fx:id="genderBox" layoutX="272.0" layoutY="156.0" prefHeight="25.0" prefWidth="74.0" />
+      <ImageView fx:id="myProfileU" fitHeight="104.0" fitWidth="111.0" layoutX="385.0" layoutY="164.0">
          <image>
             <Image url="@pics/Profile%20Picture1.jpg" />
          </image>

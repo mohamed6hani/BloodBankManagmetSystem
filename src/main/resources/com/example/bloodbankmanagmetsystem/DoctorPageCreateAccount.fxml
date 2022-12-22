@@ -11,12 +11,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="787.0" scaleShape="false" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.sceneController">
-   <AnchorPane focusTraversable="true" prefHeight="528.0" prefWidth="796.0" scaleShape="false">
-      <ImageView fitHeight="524.0" fitWidth="787.0" layoutY="4.0">
+<VBox fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="621.0" scaleShape="false" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.sceneController">
+   <AnchorPane focusTraversable="true" prefHeight="384.0" prefWidth="562.0" scaleShape="false">
+      <ImageView fitHeight="433.0" fitWidth="621.0" layoutY="4.0">
          <Image url="@anPics/Background3.JPG" />
       </ImageView>
-      <ImageView fitHeight="193.0" fitWidth="522.0" layoutX="143.0">
+      <ImageView fitHeight="167.0" fitWidth="426.0" layoutX="104.0" layoutY="4.0">
          <Image url="@pics/Logo3.png" />
       </ImageView>
       <Label layoutX="68.0" layoutY="296.0" text="Email" />
@@ -27,18 +27,16 @@
       <TextField layoutX="69.0" layoutY="262.0" />
       <TextField layoutX="69.0" layoutY="312.0" />
       <PasswordField layoutX="69.0" layoutY="358.0" />
-      <ProgressBar layoutX="279.0" layoutY="428.0" prefHeight="18.0" prefWidth="230.0" progress="0.0" />
-      <Button layoutX="319.0" layoutY="457.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Create Account" />
-      <Button layoutX="36.0" layoutY="469.0" mnemonicParsing="false" onAction="#switchDoctorLogin0" prefHeight="25.0" prefWidth="67.0" text="Back" />
-      <Label layoutX="551.0" layoutY="197.0" text="Doctor PassCode" />
-      <PasswordField layoutX="551.0" layoutY="222.0" />
-      <Label layoutX="344.0" layoutY="192.0" prefHeight="27.0" prefWidth="111.0" text="Profile Photo">
+      <ProgressBar layoutX="196.0" layoutY="400.0" prefHeight="18.0" prefWidth="230.0" progress="0.0" />
+      <Button layoutX="236.0" layoutY="371.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Create Account" />
+      <Button layoutX="14.0" layoutY="396.0" mnemonicParsing="false" onAction="#switchDoctorLogin0" prefHeight="25.0" prefWidth="67.0" text="Back" />
+      <Label layoutX="453.0" layoutY="180.0" prefHeight="27.0" prefWidth="111.0" text="Profile Photo">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Button layoutX="354.0" layoutY="392.0" mnemonicParsing="false" onAction="#singleFileUploadDoctor" prefHeight="25.0" prefWidth="91.0" text="Upload" />
-      <ImageView fx:id="myProfile" fitHeight="150.0" fitWidth="164.0" layoutX="312.0" layoutY="230.0">
+      <Button layoutX="463.0" layoutY="384.0" mnemonicParsing="false" onAction="#singleFileUploadDoctor" prefHeight="25.0" prefWidth="91.0" text="Upload" />
+      <ImageView fx:id="myProfile" fitHeight="150.0" fitWidth="164.0" layoutX="426.0" layoutY="212.0">
          <Image url="@pics/Profile%20Picture1.jpg" />
       </ImageView>
    </AnchorPane>
