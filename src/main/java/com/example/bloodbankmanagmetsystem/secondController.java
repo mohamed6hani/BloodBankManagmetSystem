@@ -20,12 +20,13 @@ import java.util.ResourceBundle;
 public class secondController implements Initializable {
 
     public ImageView myProfileU;
-    @FXML
-    private ChoiceBox<String> bloodTypeBox;
+//    @FXML
+
+//    private ChoiceBox<String> bloodTypeBox;
     @FXML
     public ChoiceBox<String> genderBox;
 
-    private final String[] BloodType = {"A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"};
+//    private final String[] BloodType = {"A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"};
     private final String[] Gender = {"Male", "Female"};
     @Override
     public void initialize (URL url, ResourceBundle resourceBundle) throws NullPointerException {
