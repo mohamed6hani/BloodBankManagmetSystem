@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.ProgressBar?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -13,47 +12,34 @@
 <?import javafx.scene.text.Font?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.sceneController">
-   <children>
-      <AnchorPane focusTraversable="true" prefHeight="528.0" prefWidth="796.0" scaleShape="false">
-         <children>
-            <ImageView fitHeight="524.0" fitWidth="787.0" layoutY="4.0">
-               <image>
-                  <Image url="@anPics/Background3.JPG" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="193.0" fitWidth="522.0" layoutX="143.0">
-               <image>
-                  <Image url="@pics/Logo3.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="68.0" layoutY="296.0" text="Email" />
-            <Label layoutX="72.0" layoutY="341.0" text="Password" />
-            <Label layoutX="72.0" layoutY="193.0" text="Name" />
-            <Label layoutX="69.0" layoutY="245.0" text="ID Number" />
-            <TextField layoutX="69.0" layoutY="210.0" prefHeight="10.0" prefWidth="149.0" />
-            <TextField layoutX="69.0" layoutY="262.0" />
-            <TextField layoutX="69.0" layoutY="312.0" />
-            <PasswordField layoutX="69.0" layoutY="358.0" />
-            <ProgressBar layoutX="289.0" layoutY="430.0" prefHeight="18.0" prefWidth="230.0" progress="0.0" />
-            <Button layoutX="330.0" layoutY="457.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Create Account" />
-            <Button layoutX="36.0" layoutY="469.0" mnemonicParsing="false" onAction="#switchAdminLogin0" prefHeight="25.0" prefWidth="67.0" text="Back" />
-            <Label layoutX="551.0" layoutY="197.0" text="Admin PassCode" />
-            <PasswordField layoutX="551.0" layoutY="222.0" />
-            <Label layoutX="551.0" layoutY="266.0" text="Certified Admin Paper" />
-            <Button layoutX="555.0" layoutY="291.0" mnemonicParsing="false" onAction="#multiFileUploadAdmin" prefHeight="25.0" prefWidth="84.0" text="Upload" />
-            <Label layoutX="338.0" layoutY="192.0" prefHeight="27.0" prefWidth="111.0" text="Profile Photo">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Button layoutX="354.0" layoutY="392.0" mnemonicParsing="false" onAction="#singleFileUploadAdmin" prefHeight="25.0" prefWidth="91.0" text="Upload" />
-            <TextArea fx:id="tracePdfA" blendMode="MULTIPLY" cache="true" editable="false" layoutX="551.0" layoutY="328.0" prefHeight="57.0" prefWidth="200.0" scaleShape="false" />
-            <ImageView fx:id="myProfileA" fitHeight="154.0" fitWidth="168.0" layoutX="316.0" layoutY="219.0">
-               <image>
-                  <Image url="@pics/Profile%20Picture1.jpg" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
-   </children>
+   <AnchorPane focusTraversable="true" prefHeight="528.0" prefWidth="796.0" scaleShape="false">
+      <ImageView fitHeight="524.0" fitWidth="787.0" layoutY="4.0">
+         <Image url="@anPics/Background3.JPG" />
+      </ImageView>
+      <ImageView fitHeight="193.0" fitWidth="522.0" layoutX="143.0">
+         <Image url="@pics/Logo3.png" />
+      </ImageView>
+      <Label layoutX="68.0" layoutY="296.0" text="Email" />
+      <Label layoutX="72.0" layoutY="341.0" text="Password" />
+      <Label layoutX="72.0" layoutY="193.0" text="Name" />
+      <Label layoutX="69.0" layoutY="245.0" text="ID Number" />
+      <TextField layoutX="69.0" layoutY="210.0" prefHeight="10.0" prefWidth="149.0" />
+      <TextField layoutX="69.0" layoutY="262.0" />
+      <TextField layoutX="69.0" layoutY="312.0" />
+      <PasswordField layoutX="69.0" layoutY="358.0" />
+      <ProgressBar layoutX="289.0" layoutY="430.0" prefHeight="18.0" prefWidth="230.0" progress="0.0" />
+      <Button layoutX="330.0" layoutY="457.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Create Account" />
+      <Button layoutX="36.0" layoutY="469.0" mnemonicParsing="false" onAction="#switchAdminLogin0" prefHeight="25.0" prefWidth="67.0" text="Back" />
+      <Label layoutX="551.0" layoutY="197.0" text="Admin PassCode" />
+      <PasswordField layoutX="551.0" layoutY="222.0" />
+      <Label layoutX="338.0" layoutY="192.0" prefHeight="27.0" prefWidth="111.0" text="Profile Photo">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="354.0" layoutY="392.0" mnemonicParsing="false" onAction="#singleFileUploadAdmin" prefHeight="25.0" prefWidth="91.0" text="Upload" />
+      <ImageView fx:id="myProfileA" fitHeight="154.0" fitWidth="168.0" layoutX="316.0" layoutY="219.0">
+         <Image url="@pics/Profile%20Picture1.jpg" />
+      </ImageView>
+   </AnchorPane>
 </VBox>

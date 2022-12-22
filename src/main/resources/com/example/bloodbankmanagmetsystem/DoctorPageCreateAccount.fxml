@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.ProgressBar?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -33,15 +32,12 @@
       <Button layoutX="36.0" layoutY="469.0" mnemonicParsing="false" onAction="#switchDoctorLogin0" prefHeight="25.0" prefWidth="67.0" text="Back" />
       <Label layoutX="551.0" layoutY="197.0" text="Doctor PassCode" />
       <PasswordField layoutX="551.0" layoutY="222.0" />
-      <Label layoutX="551.0" layoutY="266.0" text="Certified Doctor Paper" />
-      <Button layoutX="555.0" layoutY="291.0" mnemonicParsing="false" onAction="#multiFileUploadDoctor" prefHeight="25.0" prefWidth="84.0" text="Upload" />
       <Label layoutX="344.0" layoutY="192.0" prefHeight="27.0" prefWidth="111.0" text="Profile Photo">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
       <Button layoutX="354.0" layoutY="392.0" mnemonicParsing="false" onAction="#singleFileUploadDoctor" prefHeight="25.0" prefWidth="91.0" text="Upload" />
-      <TextArea fx:id="tracePdf" blendMode="MULTIPLY" cache="true" editable="false" layoutX="551.0" layoutY="328.0" prefHeight="57.0" prefWidth="200.0" scaleShape="false" />
       <ImageView fx:id="myProfile" fitHeight="150.0" fitWidth="164.0" layoutX="312.0" layoutY="230.0">
          <Image url="@pics/Profile%20Picture1.jpg" />
       </ImageView>

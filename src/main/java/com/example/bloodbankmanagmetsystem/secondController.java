@@ -12,7 +12,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-
 import java.io.*;
 import java.net.URL;
 import java.util.Objects;
@@ -30,10 +29,8 @@ public class secondController implements Initializable {
     private final String[] Gender = {"Male", "Female"};
     @Override
     public void initialize (URL url, ResourceBundle resourceBundle) throws NullPointerException {
-//        Platform.runLater(() -> {
             genderBox.getItems().addAll(Gender);
-            bloodTypeBox.getItems().addAll(BloodType);
-//        });
+//            bloodTypeBox.getItems().addAll(BloodType);
     }
     public void switchUserLogin0(ActionEvent event) throws IOException, NullPointerException{
         Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("UserLogin0.fxml"))));
@@ -43,9 +40,7 @@ public class secondController implements Initializable {
         stage.setResizable(false);
         stage.show();
     }
-
     @FXML
-
     public void singleFileUploadUser() throws FileNotFoundException {
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Pictures", "*.jpg", "*.jpeg", "*.PNG"));

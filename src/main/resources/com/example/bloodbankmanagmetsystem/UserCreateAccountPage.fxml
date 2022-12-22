@@ -25,9 +25,8 @@
       <Label layoutX="69.0" layoutY="192.0" text="National ID" />
       <Label layoutX="69.0" layoutY="237.0" text="Email" />
       <Label layoutX="68.0" layoutY="289.0" text="Password" />
-      <Label layoutX="294.0" layoutY="281.0" text="Birthday" />
-      <Label layoutX="294.0" layoutY="155.0" text="Blood Type" />
-      <Label layoutX="294.0" layoutY="192.0" text="Gender" />
+      <Label layoutX="294.0" layoutY="281.0" text="Birthdate" />
+      <Label layoutX="299.0" layoutY="167.0" text="Gender" />
       <Label layoutX="294.0" layoutY="229.0" text="Phone Number" />
       <TextField layoutX="69.0" layoutY="163.0" />
       <TextField layoutX="69.0" layoutY="209.0" />
@@ -44,8 +43,7 @@
       <Button layoutX="276.0" layoutY="402.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" text="Create Account" />
       <Button layoutX="32.0" layoutY="427.0" mnemonicParsing="false" onAction="#switchUserLogin0" prefHeight="25.0" prefWidth="74.0" text="Back" />
       <ProgressBar layoutX="238.0" layoutY="371.0" prefWidth="200.0" progress="0.0" />
-      <ChoiceBox fx:id="bloodTypeBox" layoutX="371.0" layoutY="151.0" prefHeight="25.0" prefWidth="60.0" />
-      <ChoiceBox fx:id="genderBox" layoutX="371.0" layoutY="188.0" prefHeight="25.0" prefWidth="60.0" />
+      <ChoiceBox fx:id="genderBox" layoutX="357.0" layoutY="163.0" prefHeight="25.0" prefWidth="74.0" />
       <ImageView fx:id="myProfileU" fitHeight="145.0" fitWidth="149.0" layoutX="525.0" layoutY="162.0">
          <image>
             <Image url="@pics/Profile%20Picture1.jpg" />
