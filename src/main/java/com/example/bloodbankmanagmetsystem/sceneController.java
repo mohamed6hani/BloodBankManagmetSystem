@@ -51,11 +51,19 @@ public class sceneController implements Initializable {
     }
 
     public void switchToDoctorPage(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("DoctorPage.fxml"))));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+         if(login_email.getText().isBlank() ==false && login_password.getText().isBlank() ==false ){
+            if(validateLogin()){
+                Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("DoctorPage.fxml"))));
+                stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+            }
+        }
+        else{
+            invalidLabel.setText("Please enter email and password");
+        }
+
     }
 
     public void switchToDoctorLoginPage1(ActionEvent event) throws IOException {
@@ -91,16 +99,16 @@ public class sceneController implements Initializable {
     private TextField login_email;
     @FXML
     private PasswordField login_password;
-    public void login_setOnAction(ActionEvent event) {
-        if(login_email.getText().isBlank() ==false && login_password.getText().isBlank() ==false ){
-            validateLogin();
-        }
-        else{
-            invalidLabel.setText("Please enter email and password");
-        }
-    }
+//    public void login_setOnAction(ActionEvent event) {
+//        if(login_email.getText().isBlank() ==false && login_password.getText().isBlank() ==false ){
+//            validateLogin();
+//        }
+//        else{
+//            invalidLabel.setText("Please enter email and password");
+//        }
+//    }
 
-    public void validateLogin (){
+    public boolean validateLogin (){
         
 
         String verifyLogin = "SELECT count(1) FROM Doctor WHERE Doctor_email = '" + login_email.getText() +  "' AND Doctor_password = '" + login_password.getText() + "'";
@@ -115,9 +123,11 @@ public class sceneController implements Initializable {
                 while(queryResult.next()){
                     if(queryResult.getInt( 1) == 1){
                         invalidLabel.setText("Successful Login!");
+                        return true;
                     }
                     else {
                         invalidLabel.setText("Invalid Email or Password, Please try again.");
+                        return false;
                     }
                 }
 
@@ -126,6 +136,7 @@ public class sceneController implements Initializable {
             e.printStackTrace();
             e.getCause();
        }
+        return false;
     }
 
 
