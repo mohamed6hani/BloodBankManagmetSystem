@@ -41,25 +41,26 @@ public class secondController implements Initializable {
     private final String[] Gender = {"Male", "Female"};
     @Override
     public void initialize (URL url, ResourceBundle resourceBundle) throws NullPointerException {
-            genderBox.getItems().addAll(Gender);
-            bloodTypeBox.getItems().addAll(BloodType);
+//            genderBox.getItems().addAll(Gender);
+//            bloodTypeBox.getItems().addAll(BloodType);
     }
-    public void switchUserLogin0(ActionEvent event) throws IOException, NullPointerException{
-        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("UserLogin0.fxml"))));
+    public void switchDoctorAD(ActionEvent event) throws IOException, NullPointerException{
+        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("RequestsADPage.fxml"))));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
     }
-    public void switchDoctorLogin0(ActionEvent event) throws IOException, NullPointerException{
-        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("DoctorLogin0.fxml"))));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+    public void switchDoctorRequest(ActionEvent event) throws IOException, NullPointerException{
+        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("Requests.fxml"))));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
     }
+
     @FXML
     public void singleFileUploadUser() throws FileNotFoundException {
         FileChooser fileChooser = new FileChooser();
@@ -71,19 +72,27 @@ public class secondController implements Initializable {
     }
 
     public void switchToDoctorPage(ActionEvent event) throws IOException {
-        if(!login_email.getText().isBlank() && !login_password.getText().isBlank()){
-            if(validateLogin()){
+//        if(!login_email.getText().isBlank() && !login_password.getText().isBlank()){
+//            if(validateLogin()){
                 Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("DoctorPage.fxml"))));
                 stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
                 stage.setScene(scene);
                 stage.show();
-            }
-        }
-        else{
-            invalidLabel.setText("Please enter email and password");
-        }
+//            }
+//        }
+//        else{
+//            invalidLabel.setText("Please enter email and password");
+//        }
 
+    }
+    public void switchToDVBB(ActionEvent event) throws IOException {
+        Parent fxmlLoader = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("DoctorViewBloodBank.fxml"))));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(fxmlLoader);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
     }
     public void switchToIdentify(ActionEvent event) throws IOException {
         Parent fxmlLoader = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("IdentifyPage.fxml"))));
