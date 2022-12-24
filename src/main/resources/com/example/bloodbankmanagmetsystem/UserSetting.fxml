@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.UserControllerClass">
    <children>
       <AnchorPane prefHeight="404.0" prefWidth="600.0">
          <children>
@@ -46,7 +46,7 @@
                   <Image url="@pics/Profile%20Picture1.jpg" />
                </image>
             </ImageView>
-            <Button layoutX="21.0" layoutY="361.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Back" />
+            <Button layoutX="21.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchUserPage" prefHeight="25.0" prefWidth="67.0" text="Back" />
             <TextField layoutX="366.0" layoutY="336.0" opacity="0.0" />
             <TextField layoutX="366.0" layoutY="260.0" opacity="0.0" />
             <TextField layoutX="366.0" layoutY="83.0" opacity="0.0" />

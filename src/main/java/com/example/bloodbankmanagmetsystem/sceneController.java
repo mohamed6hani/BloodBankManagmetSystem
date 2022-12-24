@@ -67,15 +67,6 @@ public class sceneController  implements Initializable {
         stage.setResizable(false);
         stage.show();
     }
-
-    public void switchToDoctorCreateAccount(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("DoctorPageCreateAccount.fxml"))));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setResizable(false);
-        stage.show();
-    }
     public void switchToUserCreateAccount(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("UserCreateAccountPage.fxml"))));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -84,16 +75,25 @@ public class sceneController  implements Initializable {
         stage.setResizable(false);
         stage.show();
     }
-    public void switchToAdminCreateAccount(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("AdminPageCreateAccount.fxml"))));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+
+    public void switchUserPage(ActionEvent event) throws IOException, NullPointerException{
+        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("UserPage.fxml"))));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
     }
     public void switchToAdminLogin(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("Admin Login Page.fxml"))));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }
+    public void switchToAdminPage(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("AdminPage.fxml"))));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

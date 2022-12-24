@@ -42,6 +42,7 @@ public class secondController implements Initializable {
     @Override
     public void initialize (URL url, ResourceBundle resourceBundle) throws NullPointerException {
 //            genderBox.getItems().addAll(Gender);
+
 //            bloodTypeBox.getItems().addAll(BloodType);
     }
     public void switchDoctorAD(ActionEvent event) throws IOException, NullPointerException{
@@ -56,6 +57,14 @@ public class secondController implements Initializable {
         Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("Requests.fxml"))));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }
+    public void switchToDoctorLoginPage1(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("Doctor Login Page1.fxml"))));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();

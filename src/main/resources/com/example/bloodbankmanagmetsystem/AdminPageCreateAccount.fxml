@@ -29,7 +29,7 @@
       <PasswordField layoutX="43.0" layoutY="321.0" />
       <ProgressBar layoutX="176.0" layoutY="372.0" prefHeight="18.0" prefWidth="230.0" progress="0.0" />
       <Button layoutX="216.0" layoutY="334.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Create Account" />
-      <Button layoutX="29.0" layoutY="378.0" mnemonicParsing="false" onAction="#switchAdminLogin0" prefHeight="25.0" prefWidth="67.0" text="Back" />
+      <Button layoutX="29.0" layoutY="378.0" mnemonicParsing="false" onAction="#switchToAdminPage" prefHeight="25.0" prefWidth="67.0" text="Back" />
       <Label layoutX="405.0" layoutY="180.0" prefHeight="27.0" prefWidth="111.0" text="Profile Photo">
          <font>
             <Font size="18.0" />

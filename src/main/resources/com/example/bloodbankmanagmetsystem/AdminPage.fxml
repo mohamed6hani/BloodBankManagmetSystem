@@ -45,7 +45,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.AdminControllerClass">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -98,8 +98,9 @@
                 <Color red="0.624" green="0.624" blue="0.624" fx:id="x2" />
               </textFill>
             </Label>
-                  <Button layoutX="14.0" layoutY="52.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Doctor Accounts" />
-                  <Button layoutX="14.0" layoutY="96.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Admin Accounts" />
+                  <Button layoutX="14.0" layoutY="52.0" mnemonicParsing="false" onAction="#switchToDoctorCreateAccount" prefHeight="25.0" prefWidth="111.0" text="Doctor Accounts" />
+                  <Button layoutX="14.0" layoutY="96.0" mnemonicParsing="false" onAction="#switchToAdminCreateAccount" prefHeight="25.0" prefWidth="111.0" text="Admin Accounts" />
+                  <Button layoutX="22.0" layoutY="524.0" mnemonicParsing="false" onAction="#switchToAdminLogin" prefHeight="25.0" prefWidth="111.0" text="Sign Out" />
           </children>
         </AnchorPane>
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
