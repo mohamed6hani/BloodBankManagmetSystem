@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.sceneController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.secondController">
    <AnchorPane prefHeight="404.0" prefWidth="600.0">
       <ImageView fitHeight="400.0" fitWidth="600.0">
          <Image url="@anPics/Background3.JPG" />
@@ -18,8 +18,8 @@
       <ImageView fitHeight="171.0" fitWidth="364.0" layoutX="110.0">
          <Image url="@pics/Logo3.png" />
       </ImageView>
-      <Button fx:id="login" layoutX="245.0" layoutY="323.0" mnemonicParsing="false" onAction="#switchToDoctorPage" prefHeight="25.0" prefWidth="138.0" text="Log In" />
-      <Button layoutX="28.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchToIdentify" prefHeight="25.0" prefWidth="74.0" text="Back" />
+      <Button fx:id="login1" layoutX="245.0" layoutY="323.0" mnemonicParsing="false" onAction="#switchToDoctorPage" prefHeight="25.0" prefWidth="138.0" text="Log In" />
+      <Button layoutX="28.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchDoctorLogin0" prefHeight="25.0" prefWidth="74.0" text="Back" />
       <Label layoutX="186.0" layoutY="182.0" prefHeight="36.0" prefWidth="57.0" text="Email :">
          <font>
             <Font size="14.0" />

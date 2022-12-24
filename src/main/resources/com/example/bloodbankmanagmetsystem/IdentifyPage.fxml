@@ -7,35 +7,35 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="366.0" prefWidth="501.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.sceneController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="408.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.sceneController">
    <AnchorPane prefHeight="402.0" prefWidth="660.0" style="-fx-background-color: pink;">
-      <ImageView fitHeight="370.0" fitWidth="513.0" layoutX="-11.0" layoutY="-3.0">
+      <ImageView fitHeight="414.0" fitWidth="574.0" layoutX="-11.0" layoutY="-3.0">
          <Image url="@anPics/Background3.JPG" />
       </ImageView>
       <ImageView fitHeight="166.0" fitWidth="380.0" layoutX="55.0" layoutY="19.0">
          <Image url="@pics/Logo3.png" />
       </ImageView>
-      <Button layoutX="206.0" layoutY="191.0" mnemonicParsing="false" onAction="#switchAdminLogin0" prefHeight="25.0" prefWidth="90.0" text="Admin">
+      <Button layoutX="237.0" layoutY="193.0" mnemonicParsing="false" onAction="#switchToAdminLogin" prefHeight="25.0" prefWidth="90.0" text="Admin">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="206.0" layoutY="237.0" mnemonicParsing="false" onAction="#switchDoctorLogin0" prefHeight="25.0" prefWidth="90.0" text="Doctor">
+      <Button layoutX="237.0" layoutY="253.0" mnemonicParsing="false" onAction="#switchToDoctorLoginPage1" prefHeight="25.0" prefWidth="90.0" text="Doctor">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="206.0" layoutY="285.0" mnemonicParsing="false" onAction="#switchUserLogin0" prefHeight="25.0" prefWidth="90.0" text="User">
+      <Button layoutX="237.0" layoutY="315.0" mnemonicParsing="false" onAction="#switchUserLogin" prefHeight="25.0" prefWidth="90.0" text="User">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="21.0" layoutY="323.0" mnemonicParsing="false" onAction="#switchToHome" prefHeight="25.0" prefWidth="90.0" text="Back">
+      <Button layoutX="21.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchToHome" prefHeight="25.0" prefWidth="90.0" text="Back">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="390.0" layoutY="323.0" mnemonicParsing="false" onAction="#Quit" prefHeight="25.0" prefWidth="90.0" text="Exit">
+      <Button layoutX="444.0" layoutY="348.0" mnemonicParsing="false" onAction="#Quit" prefHeight="25.0" prefWidth="90.0" text="Exit">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
