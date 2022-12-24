@@ -19,7 +19,7 @@
          <Image url="@pics/Logo3.png" />
       </ImageView>
       <Button fx:id="login1" layoutX="245.0" layoutY="323.0" mnemonicParsing="false" onAction="#switchToDoctorPage" prefHeight="25.0" prefWidth="138.0" text="Log In" />
-      <Button layoutX="28.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchDoctorLogin0" prefHeight="25.0" prefWidth="74.0" text="Back" />
+      <Button layoutX="28.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchToIdentify" prefHeight="25.0" prefWidth="74.0" text="Back" />
       <Label layoutX="186.0" layoutY="182.0" prefHeight="36.0" prefWidth="57.0" text="Email :">
          <font>
             <Font size="14.0" />
