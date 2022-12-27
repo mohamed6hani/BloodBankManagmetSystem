@@ -8,14 +8,18 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class AdminControllerClass implements Initializable {
 
-    public void switchToDoctorCreateAccount(ActionEvent event) throws IOException {
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
+    public void switchToDoctorCreateAccount(ActionEvent event) throws IOException, NullPointerException {
         Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("DoctorPageCreateAccount.fxml"))));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
@@ -23,7 +27,7 @@ public class AdminControllerClass implements Initializable {
         stage.setResizable(false);
         stage.show();
     }
-    public void switchToAdminLogin(ActionEvent event) throws IOException {
+    public void switchToAdminLogin(ActionEvent event) throws IOException, NullPointerException {
         Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("Admin Login Page.fxml"))));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
@@ -31,16 +35,12 @@ public class AdminControllerClass implements Initializable {
         stage.setResizable(false);
         stage.show();
     }
-    public void switchToAdminCreateAccount(ActionEvent event) throws IOException {
+    public void switchToAdminCreateAccount(ActionEvent event) throws IOException, NullPointerException {
         Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("AdminPageCreateAccount.fxml"))));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
-    }
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
     }
 }

@@ -19,7 +19,7 @@
       <ImageView fitHeight="171.0" fitWidth="364.0" layoutX="110.0">
          <Image url="@pics/Logo3.png" />
       </ImageView>
-      <Button layoutX="245.0" layoutY="323.0" mnemonicParsing="false" onAction="#switchUserPage" prefHeight="25.0" prefWidth="138.0" text="Log In" />
+      <Button layoutX="245.0" layoutY="296.0" mnemonicParsing="false" onAction="#switchUserPage" prefHeight="25.0" prefWidth="138.0" text="Log In" />
       <Button layoutX="28.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchToIdentify" prefHeight="25.0" prefWidth="74.0" text="Back" />
       <Label layoutX="184.0" layoutY="177.0" prefHeight="36.0" prefWidth="57.0" text="Email :">
          <font>
@@ -33,11 +33,12 @@
          </font>
       </Label>
       <PasswordField layoutX="255.0" layoutY="232.0" prefHeight="25.0" prefWidth="166.0" />
-      <ProgressBar layoutX="214.0" layoutY="291.0" prefWidth="200.0" progress="0.0" />
+      <ProgressBar layoutX="214.0" layoutY="269.0" prefWidth="200.0" progress="0.0" />
       <Label layoutX="300.0" layoutY="25.0" prefHeight="36.0" prefWidth="57.0" text="User" textFill="#a40d0d">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
+      <Button layoutX="245.0" layoutY="336.0" mnemonicParsing="false" onAction="#switchToUserCreateAccount" prefHeight="25.0" prefWidth="138.0" text="Create Account" />
    </AnchorPane>
 </VBox>

@@ -2,35 +2,20 @@ package com.example.bloodbankmanagmetsystem;
 
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 
 import java.io.*;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class sceneController  implements Initializable {
-    public ImageView myProfile;
-//    public TextArea tracePdf;
-    public ImageView myProfileA;
-//    public TextArea tracePdfA;
-
-
-    public Button Login;
     private Stage stage;
     private Scene scene;
 
@@ -84,7 +69,7 @@ public class sceneController  implements Initializable {
         stage.setResizable(false);
         stage.show();
     }
-    public void switchToAdminLogin(ActionEvent event) throws IOException {
+    public void switchToAdminLogin(ActionEvent event) throws IOException, NullPointerException {
         Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("Admin Login Page.fxml"))));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -92,7 +77,7 @@ public class sceneController  implements Initializable {
         stage.setResizable(false);
         stage.show();
     }
-    public void switchToAdminPage(ActionEvent event) throws IOException {
+    public void switchToAdminPage(ActionEvent event) throws IOException, NullPointerException {
         Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("AdminPage.fxml"))));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -103,27 +88,6 @@ public class sceneController  implements Initializable {
     public void Quit() {
         System.exit(0);
     }
-
-    @FXML
-
-    public void singleFileUploadDoctor() throws FileNotFoundException {
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Pictures", "*.jpg", "*.jpeg", "*.PNG"));
-        File file = fileChooser.showOpenDialog(null);
-        InputStream image1 = new FileInputStream(String.valueOf(file));
-        Image image = new Image(image1);
-        myProfile.setImage(image);
-    }
-    public void singleFileUploadAdmin() throws FileNotFoundException {
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Pictures", "*.jpg", "*.jpeg", "*.PNG"));
-        File file = fileChooser.showOpenDialog(null);
-        InputStream image1 = new FileInputStream(String.valueOf(file));
-        Image image = new Image(image1);
-        myProfileA.setImage(image);
-    }
-
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
