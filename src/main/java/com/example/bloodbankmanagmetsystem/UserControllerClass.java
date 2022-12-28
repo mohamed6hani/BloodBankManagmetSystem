@@ -56,6 +56,7 @@ public class UserControllerClass implements Initializable {
         stage.setResizable(false);
         stage.show();
     }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
