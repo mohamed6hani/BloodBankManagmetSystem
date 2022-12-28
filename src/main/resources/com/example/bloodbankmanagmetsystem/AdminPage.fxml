@@ -108,8 +108,8 @@
             <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="356.0" prefWidth="496.0">
               <children>
                 <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="View" textAlignment="CENTER" textFill="$x2" wrapText="false" />
-                        <Button layoutX="20.0" layoutY="96.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="View Doctors" />
-                        <Button layoutX="20.0" layoutY="178.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="View Admins" />
+                        <Button layoutX="20.0" layoutY="96.0" mnemonicParsing="false" onAction="#switchToAdminDoctorViewAccountPage" prefHeight="25.0" prefWidth="111.0" text="View Doctors" />
+                        <Button layoutX="20.0" layoutY="178.0" mnemonicParsing="false" onAction="#switchToAdminViewAccountPage" prefHeight="25.0" prefWidth="111.0" text="View Admins" />
               </children>
             </AnchorPane>
           </content>

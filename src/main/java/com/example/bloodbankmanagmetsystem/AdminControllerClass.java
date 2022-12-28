@@ -43,4 +43,28 @@ public class AdminControllerClass implements Initializable {
         stage.setResizable(false);
         stage.show();
     }
+    public void switchToAdminPage(ActionEvent event) throws IOException, NullPointerException {
+        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("AdminPage.fxml"))));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }
+    public void switchToAdminViewAccountPage(ActionEvent event) throws IOException, NullPointerException {
+        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("AdminViewAccount.fxml"))));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }
+    public void switchToAdminDoctorViewAccountPage(ActionEvent event) throws IOException, NullPointerException {
+        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("AdminDoctorViewAccount.fxml"))));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+    }
 }
