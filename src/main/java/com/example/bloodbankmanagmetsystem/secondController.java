@@ -1,11 +1,16 @@
 package com.example.bloodbankmanagmetsystem;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.io.*;
 import java.net.URL;
@@ -16,14 +21,14 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class secondController  implements Initializable {
-//    @FXML
-//    private Button login1;
-//    @FXML
-//    private Label invalidLabel;
-//    @FXML
-//    private TextField login_email;
-//    @FXML
-//    private PasswordField login_password;
+    @FXML
+    private Button login1;
+    @FXML
+    private Label invalidLabel;
+    @FXML
+    private TextField login_email;
+    @FXML
+    private PasswordField login_password;
     private Stage stage;
     private Scene scene;
 
@@ -52,20 +57,25 @@ public class secondController  implements Initializable {
         stage.setResizable(false);
         stage.show();
     }
-
+    //------doctor login--------
     public void switchToDoctorPage(ActionEvent event) throws IOException, NullPointerException {
-//        if(!login_email.getText().isBlank() && !login_password.getText().isBlank()){
-//            if(validateLogin()){
+        if(!login_email.getText().isBlank() && !login_password.getText().isBlank()){
+            doctor doc = new doctor(login_email.getText(),login_password.getText() );
+            if(doc.verifyLogin(doc.getdoctorlogin())){
                 Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("DoctorPage.fxml"))));
                 stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
                 stage.setScene(scene);
                 stage.show();
-//            }
-//        }
-//        else{
-//            invalidLabel.setText("Please enter email and password");
-//        }
+
+            }
+            else{
+                invalidLabel.setText("Invalid  Email or Password, Please Try Again");
+            }
+        }
+        else{
+            invalidLabel.setText("Please enter email and password");
+        }
 
     }
     public void switchToDVBB(ActionEvent event) throws IOException, NullPointerException {
@@ -89,6 +99,20 @@ public class secondController  implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //    public boolean validateLogin (){
 //        String verifyLogin = "SELECT count(1) FROM Doctor WHERE Doctor_email = '" + login_email.getText() +  "' AND Doctor_password = '" + login_password.getText() + "'";
@@ -118,4 +142,12 @@ public class secondController  implements Initializable {
 //        }
 //        return false;
 //    }
+
+
+
+
+
+
+
+
 }
