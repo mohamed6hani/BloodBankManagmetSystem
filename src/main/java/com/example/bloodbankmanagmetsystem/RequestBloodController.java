@@ -20,7 +20,6 @@ public class RequestBloodController implements Initializable {
     private ChoiceBox<String> bloodTypeBox;
     @FXML
     public ChoiceBox<String> genderBox;
-
     @FXML
     private final String[] BloodType = {"A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"};
     @FXML

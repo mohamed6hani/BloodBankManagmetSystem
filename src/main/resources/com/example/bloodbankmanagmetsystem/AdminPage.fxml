@@ -45,7 +45,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.AdminControllerClass">
+<VBox prefHeight="383.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.AdminControllerClass">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -86,9 +86,9 @@
         </Menu>
       </menus>
     </MenuBar>
-    <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <SplitPane dividerPositions="0.2505567928730512" focusTraversable="true" prefHeight="526.0" prefWidth="758.0" VBox.vgrow="ALWAYS">
       <items>
-        <AnchorPane>
+        <AnchorPane prefHeight="368.0" prefWidth="163.0">
           <children>
             <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Accounts" textAlignment="CENTER" wrapText="false">
               <font>
@@ -98,25 +98,22 @@
                 <Color red="0.624" green="0.624" blue="0.624" fx:id="x2" />
               </textFill>
             </Label>
-                  <Button layoutX="14.0" layoutY="52.0" mnemonicParsing="false" onAction="#switchToDoctorCreateAccount" prefHeight="25.0" prefWidth="111.0" text="Doctor Accounts" />
-                  <Button layoutX="14.0" layoutY="96.0" mnemonicParsing="false" onAction="#switchToAdminCreateAccount" prefHeight="25.0" prefWidth="111.0" text="Admin Accounts" />
-                  <Button layoutX="22.0" layoutY="524.0" mnemonicParsing="false" onAction="#switchToAdminLogin" prefHeight="25.0" prefWidth="111.0" text="Sign Out" />
+                  <Button layoutX="14.0" layoutY="96.0" mnemonicParsing="false" onAction="#switchToDoctorCreateAccount" prefHeight="25.0" prefWidth="111.0" text="Doctor Accounts" />
+                  <Button layoutX="14.0" layoutY="178.0" mnemonicParsing="false" onAction="#switchToAdminCreateAccount" prefHeight="25.0" prefWidth="111.0" text="Admin Accounts" />
+                  <Button layoutX="14.0" layoutY="307.0" mnemonicParsing="false" onAction="#switchToAdminLogin" prefHeight="25.0" prefWidth="111.0" text="Sign Out" />
           </children>
         </AnchorPane>
         <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
           <content>
-            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="430.0">
+            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="356.0" prefWidth="496.0">
               <children>
                 <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="View" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+                        <Button layoutX="20.0" layoutY="96.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="View Doctors" />
+                        <Button layoutX="20.0" layoutY="178.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="View Admins" />
               </children>
             </AnchorPane>
           </content>
         </ScrollPane>
-        <AnchorPane>
-          <children>
-            <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Details" textAlignment="CENTER" textFill="$x2" wrapText="false" />
-          </children>
-        </AnchorPane>
       </items>
     </SplitPane>
   </children>

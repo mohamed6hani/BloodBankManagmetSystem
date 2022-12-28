@@ -7,8 +7,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -27,22 +25,14 @@ public class UserSettingController implements Initializable {
     @FXML
     public Label Pass;
     @FXML
-    public Button save;
-    @FXML
-    public Label bloodTypeUser;
-    @FXML
     public ImageView myProfileU;
     @FXML
     private TextField changeName;
     @FXML
     private TextField changePassword;
-    @FXML
-    private ChoiceBox<String> bloodTypeBox;
-    @FXML
-    private final String[] BloodType = {"A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"};
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        bloodTypeBox.getItems().addAll(BloodType);
     }
 
     public void ChangeNameButton() throws NullPointerException{
@@ -59,14 +49,7 @@ public class UserSettingController implements Initializable {
         String pass = changePassword.getText();
         Pass.setText(pass);
     }
-    public void ChangeBloodTypeButton() throws NullPointerException{
-        bloodTypeBox.setOpacity(100);
-        save.setOpacity(100);
-    }
-    public void ChangeBlood() throws NullPointerException{
-        String bloodType = bloodTypeBox.getValue();
-        bloodTypeUser.setText(bloodType);
-    }
+
 
     public void switchUserPage(ActionEvent event) throws IOException, NullPointerException{
         Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("UserPage.fxml"))));
