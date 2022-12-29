@@ -13,18 +13,18 @@ public class bloodBank {
     private String bloodAmount;
     private String bloodType;
 
-    public String getBloodAmount(){
-       return bloodAmount;
+    public void setBloodAmount(String bloodAmount){
+        this.bloodAmount = bloodAmount;
     }
 
-    public void setBloodAmount(String bloodAmount){
-       this.bloodAmount = bloodAmount;
+    public String getBloodAmount(){
+        return bloodAmount;
     }
     public void viewBloodBank(Label bamount){
 
         DB db = new DB();
         Connection con = db.getConnection();
-        String bb = "SELECT blood_amount FROM blood_bank WHERE blood_type = '"+getBloodAmount()+"'";
+        String bb = "SELECT blood_amount FROM blood_bank WHERE blood_type = '"+bloodType+"'";
 
         try {
             Statement stmt = con.createStatement();
