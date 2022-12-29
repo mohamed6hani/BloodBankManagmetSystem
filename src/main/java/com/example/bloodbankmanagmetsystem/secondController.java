@@ -34,6 +34,21 @@ public class secondController  implements Initializable {
 
     @FXML
     private Label aposl;
+    @FXML
+    private Label bposl;
+    @FXML
+    private Label abposl;
+    @FXML
+    private Label oposl;
+    @FXML
+    private Label anegl;
+    @FXML
+    private Label abnegl;
+    @FXML
+    private Label bnegl;
+    @FXML
+    private Label onegl;
+
 
 
 
@@ -105,6 +120,7 @@ public class secondController  implements Initializable {
         stage.setResizable(false);
         stage.show();
 
+
     }
 
 
@@ -119,57 +135,32 @@ public class secondController  implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        bloodBank bbapos = new bloodBank("A+");
+        bbapos.viewBloodBank(aposl);
+
+        bloodBank bbaneg = new bloodBank("A-");
+        bbaneg.viewBloodBank(anegl);
+
+        bloodBank bbbpos = new bloodBank("B+");
+        bbbpos.viewBloodBank(bposl);
+
+        bloodBank bbbneg = new bloodBank("B-");
+        bbbneg.viewBloodBank(bnegl);
+
+        bloodBank bbabpos = new bloodBank("AB+");
+        bbabpos.viewBloodBank(abposl);
+
+        bloodBank bbabneg = new bloodBank("AB-");
+        bbabneg.viewBloodBank(abnegl);
+
+        bloodBank bbopos = new bloodBank("O+");
+        bbopos.viewBloodBank(oposl);
+
+        bloodBank bboneg = new bloodBank("O-");
+        bboneg.viewBloodBank(onegl);
+
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//    public boolean validateLogin (){
-//        String verifyLogin = "SELECT count(1) FROM Doctor WHERE Doctor_email = '" + login_email.getText() +  "' AND Doctor_password = '" + login_password.getText() + "'";
-//        DB db = new DB();
-//        Connection con = db.getConnection();
-//
-//
-//        try {
-//            Statement stmt = con.createStatement();
-//            ResultSet queryResult = stmt.executeQuery(verifyLogin);
-//
-//            while(queryResult.next()){
-//                if(queryResult.getInt( 1) == 1){
-//                    invalidLabel.setText("Successful Login!");
-//                    return true;
-//                }
-//                else {
-//                    invalidLabel.setText("Invalid Email or Password, Please try again.");
-//                    return false;
-//                }
-//            }
-//
-//
-//        } catch (Exception e){
-//            e.printStackTrace();
-//            e.getCause();
-//        }
-//        return false;
-//    }
-
-
-
-
-
-
 
 
 }

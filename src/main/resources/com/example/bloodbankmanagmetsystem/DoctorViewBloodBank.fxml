@@ -23,52 +23,87 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="80.0" layoutY="115.0" text="A+">
+            <Label layoutX="94.0" layoutY="114.0" text="A+">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="87.0" layoutY="244.0" text="AB+">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="220.0" layoutY="114.0" text="A-">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="350.0" layoutY="114.0" text="B+">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="349.0" layoutY="244.0" text="O+">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="479.0" layoutY="114.0" text="B-">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="477.0" layoutY="244.0" text="O-">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="211.0" layoutY="244.0" text="AB-">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="aposl" layoutX="76.0" layoutY="173.0" prefHeight="29.0" prefWidth="87.0" text="  " textAlignment="CENTER" textFill="#000000cb">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="72.0" layoutY="231.0" text="AB+">
+            <Label fx:id="anegl" layoutX="203.0" layoutY="173.0" prefHeight="29.0" prefWidth="87.0" text="  " textFill="#000000cc">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="213.0" layoutY="115.0" text="A-">
+            <Label fx:id="bposl" layoutX="336.0" layoutY="173.0" prefHeight="29.0" prefWidth="87.0" text="  " textFill="#000000cc">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="334.0" layoutY="115.0" text="B+">
+            <Label fx:id="bnegl" layoutX="460.0" layoutY="173.0" prefHeight="29.0" prefWidth="87.0" text="  " textFill="#000000cc">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="334.0" layoutY="231.0" text="O+">
+            <Label fx:id="abposl" layoutX="76.0" layoutY="306.0" prefHeight="29.0" prefWidth="87.0" text="  " textFill="#000000cb">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="464.0" layoutY="115.0" text="B-">
+            <Label fx:id="abnegl" layoutX="203.0" layoutY="306.0" prefHeight="29.0" prefWidth="87.0" text="  " textFill="#000000cb">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="462.0" layoutY="231.0" text="O-">
+            <Label fx:id="oposl" layoutX="328.0" layoutY="306.0" prefHeight="29.0" prefWidth="87.0" text="  " textFill="#000000cc">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="205.0" layoutY="231.0" text="AB-">
+            <Label fx:id="onegl" layoutX="460.0" layoutY="306.0" prefHeight="29.0" prefWidth="87.0" text="  " textFill="#000000cc">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label fx:id="aposl" layoutX="45.0" layoutY="166.0" prefHeight="29.0" prefWidth="114.0">
-               <font>
-                  <Font name="System Bold" size="24.0" />
-               </font>
-            </Label>
-            <Label layoutX="188.0" layoutY="166.0" prefHeight="29.0" prefWidth="114.0" text=".">
+            <Label layoutX="193.0" layoutY="53.0" prefHeight="29.0" prefWidth="219.0" text="      Amount (units)">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>

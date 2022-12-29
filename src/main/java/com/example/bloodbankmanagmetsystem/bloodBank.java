@@ -29,7 +29,9 @@ public class bloodBank {
         try {
             Statement stmt = con.createStatement();
             ResultSet queryResult = stmt.executeQuery(bb);
-            setBloodAmount(queryResult.getString(1));
+            while (queryResult.next()) {
+                setBloodAmount(queryResult.getString(1));
+            }
             bamount.setText(getBloodAmount());
             con.close();
 
