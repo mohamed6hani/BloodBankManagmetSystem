@@ -84,32 +84,26 @@ public class secondController  implements Initializable {
     }
     //------doctor login--------
     public void switchToDoctorPage(ActionEvent event) throws IOException, NullPointerException {
-        if(!login_email.getText().isBlank() && !login_password.getText().isBlank()){
-            doctor doc = new doctor(login_email.getText(),login_password.getText() );
-            if(doc.verifyLogin(doc.getdoctorlogin())){
+//        if(!login_email.getText().isBlank() && !login_password.getText().isBlank()){
+//            doctor doc = new doctor(login_email.getText(),login_password.getText() );
+//            if(doc.verifyLogin(doc.getdoctorlogin())){
                 Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("DoctorPage.fxml"))));
                 stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
                 stage.setScene(scene);
                 stage.show();
 
-            }
-            else{
-                invalidLabel.setText("Invalid  Email or Password, Please Try Again");
-            }
-        }
-        else{
-            invalidLabel.setText("Please enter email and password");
-        }
+//            }
+//            else{
+//                invalidLabel.setText("Invalid  Email or Password, Please Try Again");
+//            }
+//        }
+//        else{
+//            invalidLabel.setText("Please enter email and password");
+//        }
 
     }
-    public void switchToDoctorPageback(ActionEvent event) throws IOException, NullPointerException {
-        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("DoctorPage.fxml"))));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
+
 
     //View Blood Bank
     public void switchToDVBB(ActionEvent event) throws IOException, NullPointerException {
@@ -122,8 +116,6 @@ public class secondController  implements Initializable {
 
 
     }
-
-
     public void switchToIdentify(ActionEvent event) throws IOException, NullPointerException {
         Parent fxmlLoader = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("IdentifyPage.fxml"))));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();

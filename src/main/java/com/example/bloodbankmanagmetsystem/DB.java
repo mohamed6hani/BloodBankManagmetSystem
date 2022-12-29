@@ -5,7 +5,7 @@ import java.sql.*;
 
 public class DB {
     public Connection conlink;
-    public Connection getConnection() {
+    public Connection getConnection() throws NullPointerException{
 
 
         String host = "jdbc:mysql://localhost:3306/bloodpointdb";
