@@ -17,6 +17,7 @@ import java.net.URL;
 //import java.sql.Connection;
 //import java.sql.ResultSet;
 //import java.sql.Statement;
+import java.sql.ResultSet;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
@@ -29,8 +30,17 @@ public class secondController  implements Initializable {
     private TextField login_email;
     @FXML
     private PasswordField login_password;
+
+
+    @FXML
+    private Label aposl;
+
+
+
     private Stage stage;
     private Scene scene;
+
+
 
 
     public void switchDoctorAD(ActionEvent event) throws IOException, NullPointerException{
@@ -78,6 +88,15 @@ public class secondController  implements Initializable {
         }
 
     }
+    public void switchToDoctorPageback(ActionEvent event) throws IOException, NullPointerException {
+        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("DoctorPage.fxml"))));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    //View Blood Bank
     public void switchToDVBB(ActionEvent event) throws IOException, NullPointerException {
         Parent fxmlLoader = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("DoctorViewBloodBank.fxml"))));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -85,7 +104,10 @@ public class secondController  implements Initializable {
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
+
     }
+
+
     public void switchToIdentify(ActionEvent event) throws IOException, NullPointerException {
         Parent fxmlLoader = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("IdentifyPage.fxml"))));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();

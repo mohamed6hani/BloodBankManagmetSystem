@@ -137,15 +137,6 @@ public class sceneController  implements Initializable {
             invalidLabel2.setText("Please enter email and password");
         }
 
-
-
-
-//        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("AdminPage.fxml"))));
-//        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-//        scene = new Scene(root);
-//        stage.setScene(scene);
-//        stage.setResizable(false);
-//        stage.show();
     }
     public void Quit() {
         System.exit(0);

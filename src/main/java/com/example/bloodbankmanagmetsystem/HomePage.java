@@ -14,6 +14,7 @@ public class HomePage extends Application {
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
+
     }
 
     public static void main(String[] args) {
