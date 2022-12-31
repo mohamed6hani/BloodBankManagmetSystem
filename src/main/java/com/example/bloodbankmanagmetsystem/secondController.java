@@ -55,10 +55,6 @@ public class secondController  implements Initializable {
     private Label onegl;
 
 
-
-
-
-
     private Stage stage;
     private Scene scene;
 
@@ -82,7 +78,6 @@ public class secondController  implements Initializable {
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
-
     }
 
     public void switchToDoctorLoginPage1(ActionEvent event) throws IOException, NullPointerException {
@@ -94,6 +89,7 @@ public class secondController  implements Initializable {
         stage.show();
     }
     //------doctor login--------
+
     public void switchToDoctorPage(ActionEvent event) throws IOException, NullPointerException {
         if(!login_email.getText().isBlank() && !login_password.getText().isBlank()){
             doctor doc = new doctor( login_email.getText(),login_password.getText() );
