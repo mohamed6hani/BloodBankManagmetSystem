@@ -45,7 +45,7 @@ public class bloodRequest {
 
 
 
-    public void displayToUser(String docName, LocalDate date, String bloodType, String location, String patientName, int patientAge,
+    public void displayToUser(LocalDate date, String bloodType, String location, String patientName, int patientAge,
                               char patientGender, boolean urgent, int amount){
 
     };
