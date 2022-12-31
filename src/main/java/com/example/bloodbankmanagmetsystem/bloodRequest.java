@@ -13,36 +13,33 @@ public class bloodRequest {
     private String bloodType;
     private String location;
     private String patientName;
-    private int patientAge;
-    private char patientGender;
+    private String patientAge;
+    private String patientGender;
     //private int requestID;
     private boolean urgent;
     private int amount;
 
     //methods
 
-    public boolean addRequest(String docName, LocalDate date, String bloodType, String location, String patientName, int patientAge,
-                           char patientGender, boolean urgent, int amount){
+    public void addRequest(LocalDate date, String bloodType, String location, String patientName, String patientAge,
+                           String patientGender, int urgent, int amount){
 
         DB db = new DB();
         Connection con = db.getConnection();
-        String placeRequest = "INSERT INTO BloodRequests VALUES('"+docName+"','"+bloodType+"', '"+date+"', '"+location+"', "+amount+", '"+patientName+"','"+patientGender+"', "+patientAge+", "+urgent+")";
+        String placeRequest = "INSERT INTO BloodRequests (BloodType, date, location, amount_in_units, patient_name, patient_gender, patient_age, urgent) VALUES ('"+bloodType+"', '"+date+"', '"+location+"', "+amount+", '"+patientName+"','"+patientGender+"', "+patientAge+", "+urgent+")";
 
         try {
             Statement stmt = con.createStatement();
-            ResultSet queryResult = stmt.executeQuery(placeRequest);
-
-           // requestLabel.setText("Request Successfully added");
+            stmt.executeUpdate(placeRequest);
             System.out.println("Success");
             con.close();
-            return true;
+
 
 
         } catch (Exception e){
             e.printStackTrace();
             e.getCause();
         }
-        return false;
 
     };
 
@@ -52,11 +49,6 @@ public class bloodRequest {
                               char patientGender, boolean urgent, int amount){
 
     };
-
-
-
-
-
 
 
 }

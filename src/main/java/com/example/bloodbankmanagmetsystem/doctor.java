@@ -2,7 +2,7 @@ package com.example.bloodbankmanagmetsystem;
 
 public class doctor extends Person{
     doctor(String email, String password){
-        super(email,  password);
+        super(email, password);
 
     };
     private int DocID;

@@ -5,14 +5,17 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class Person {
-    Person(String email, String password){
+    Person( String email, String password){
         this.email = email;
         this.password = password;
+
     }
     protected String Name;
     protected String email;
     protected String password;
     protected String phonenum;
+
+
 
     public boolean verifyLogin(String login){
         DB db = new DB();
