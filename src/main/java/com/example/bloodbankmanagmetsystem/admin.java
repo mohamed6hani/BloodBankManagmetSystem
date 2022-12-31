@@ -14,6 +14,18 @@ public class admin extends Person {
         this.adminID = adminID;
     }
 
+    admin(String Name, int adminID, String email, String phonenum) {
+        super(email);
+        this.Name = Name;
+        this.adminID = adminID;
+        this.phonenum = phonenum;
+
+
+    }
+    admin(){
+
+    }
+
     private int adminID;
     private String viewadm = "SELECT * FROM admin ";
     private String viewdoc = "SELECT * FROM Doctor ";
@@ -63,6 +75,8 @@ public class admin extends Person {
     public void setphonenum() {
         this.phonenum = phonenum;
     }
+
+
 
 
     //-------------methods

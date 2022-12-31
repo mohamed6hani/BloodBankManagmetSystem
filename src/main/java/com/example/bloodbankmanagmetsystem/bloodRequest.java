@@ -15,7 +15,6 @@ public class bloodRequest {
     private String patientName;
     private String patientAge;
     private String patientGender;
-    //private int requestID;
     private boolean urgent;
     private int amount;
 
@@ -31,7 +30,6 @@ public class bloodRequest {
         try {
             Statement stmt = con.createStatement();
             stmt.executeUpdate(placeRequest);
-            System.out.println("Success");
             con.close();
 
 
@@ -42,7 +40,6 @@ public class bloodRequest {
         }
 
     };
-
 
 
     public void displayToUser(LocalDate date, String bloodType, String location, String patientName, int patientAge,
