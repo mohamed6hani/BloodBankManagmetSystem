@@ -16,17 +16,16 @@ public class bloodRequest {
     private String patientAge;
     private String patientGender;
     //private int requestID;
-    private boolean urgent;
     private int amount;
 
     //methods
 
     public void addRequest(LocalDate date, String bloodType, String location, String patientName, String patientAge,
-                           String patientGender, int urgent, int amount){
+                           String patientGender,int amount){
 
         DB db = new DB();
         Connection con = db.getConnection();
-        String placeRequest = "INSERT INTO BloodRequests (BloodType, date, location, amount_in_units, patient_name, patient_gender, patient_age, urgent) VALUES ('"+bloodType+"', '"+date+"', '"+location+"', "+amount+", '"+patientName+"','"+patientGender+"', "+patientAge+", "+urgent+")";
+        String placeRequest = "INSERT INTO BloodRequests (BloodType, date, location, amount_in_units, patient_name, patient_gender, patient_age) VALUES ('"+bloodType+"', '"+date+"', '"+location+"', "+amount+", '"+patientName+"','"+patientGender+"', "+patientAge+")";
 
         try {
             Statement stmt = con.createStatement();
@@ -46,7 +45,7 @@ public class bloodRequest {
 
 
     public void displayToUser(String docName, LocalDate date, String bloodType, String location, String patientName, int patientAge,
-                              char patientGender, boolean urgent, int amount){
+                              char patientGender, int amount){
 
     };
 

@@ -5,7 +5,6 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -14,31 +13,30 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.RequestBloodController">
    <AnchorPane prefHeight="407.0" prefWidth="600.0">
-      <ImageView fitHeight="400.0" fitWidth="600.0">
+      <ImageView fitHeight="400.0" fitWidth="600.0" layoutX="1.0" layoutY="3.0">
          <Image url="@anPics/Background3.JPG" />
       </ImageView>
       <Button fx:id="send" layoutX="250.0" layoutY="348.0" mnemonicParsing="false" onAction="#addRequest" prefHeight="30.0" prefWidth="101.0" text="Send" />
-      <ToggleButton fx:id="urgent" layoutX="58.0" layoutY="295.0" mnemonicParsing="false" text="Urgent" />
       <Label layoutX="38.0" layoutY="14.0" text="Request Blood">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <ChoiceBox fx:id="bloodTypeBox" layoutX="120.0" layoutY="66.0" prefHeight="25.0" prefWidth="82.0" />
-      <Label layoutX="38.0" layoutY="70.0" text="Blood Type" />
-      <TextField fx:id="location" layoutX="38.0" layoutY="127.0" />
-      <Label layoutX="38.0" layoutY="105.0" text="Location" />
-      <DatePicker fx:id="date" layoutX="38.0" layoutY="185.0" />
-      <Label layoutX="40.0" layoutY="162.0" text="Date" />
-      <TextField fx:id="amount" layoutX="38.0" layoutY="246.0" />
-      <Label layoutX="40.0" layoutY="223.0" text="Amount" />
-      <TextField fx:id="patient_name" layoutX="338.0" layoutY="192.0" />
-      <Label layoutX="337.0" layoutY="224.0" text="Age" />
-      <TextField fx:id="age" layoutX="338.0" layoutY="244.0" />
+      <ChoiceBox fx:id="bloodTypeBox" layoutX="120.0" layoutY="77.0" prefHeight="25.0" prefWidth="82.0" />
+      <Label layoutX="38.0" layoutY="81.0" text="Blood Type" />
+      <TextField fx:id="location" layoutX="38.0" layoutY="138.0" />
+      <Label layoutX="38.0" layoutY="116.0" text="Location" />
+      <DatePicker fx:id="date" layoutX="38.0" layoutY="196.0" />
+      <Label layoutX="40.0" layoutY="173.0" text="Date" />
+      <TextField fx:id="amount" layoutX="38.0" layoutY="257.0" />
+      <Label layoutX="40.0" layoutY="234.0" text="Amount" />
+      <TextField fx:id="patient_name" layoutX="338.0" layoutY="196.0" />
+      <Label layoutX="340.0" layoutY="226.0" text="Age" />
+      <TextField fx:id="age" layoutX="338.0" layoutY="255.0" />
       <Label layoutX="337.0" layoutY="171.0" text="Name" />
-      <ChoiceBox fx:id="genderBox" layoutX="411.0" layoutY="127.0" prefHeight="25.0" prefWidth="82.0" />
-      <Label layoutX="337.0" layoutY="131.0" text="Gender" />
-      <Label layoutX="337.0" layoutY="74.0" text="Patient Info">
+      <ChoiceBox fx:id="genderBox" layoutX="411.0" layoutY="138.0" prefHeight="25.0" prefWidth="82.0" />
+      <Label layoutX="337.0" layoutY="142.0" text="Gender" />
+      <Label layoutX="337.0" layoutY="85.0" text="Patient Info">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
