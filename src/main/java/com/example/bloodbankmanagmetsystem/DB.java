@@ -1,4 +1,5 @@
 package com.example.bloodbankmanagmetsystem;
+
 import java.sql.*;
 
 
@@ -24,6 +25,7 @@ public class DB {
 
         return conlink;
     }
+
 
 
 }

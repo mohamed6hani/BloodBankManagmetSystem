@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.AdminControllerClass">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.newController">
    <children>
       <AnchorPane prefHeight="408.0" prefWidth="600.0">
          <children>
@@ -30,7 +30,7 @@
                 <TableColumn fx:id="adminIDc" prefWidth="129.0" text="Admin ID" />
                 <TableColumn fx:id="adminNamec" prefWidth="125.0" text="Admin Name" />
                   <TableColumn fx:id="adminEmailc" prefWidth="134.0" text="Admin Email" />
-                  <TableColumn fx:id="adminePhonenumc" minWidth="0.0" prefWidth="147.0" text="Admin Phone Number" />
+                  <TableColumn fx:id="adminPhonenumc" minWidth="0.0" prefWidth="147.0" text="Admin Phone Number" />
               </columns>
             </TableView>
          </children>

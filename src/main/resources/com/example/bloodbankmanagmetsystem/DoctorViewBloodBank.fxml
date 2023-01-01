@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.secondController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.newController">
    <children>
       <AnchorPane prefHeight="406.0" prefWidth="600.0">
          <children>
@@ -17,7 +17,7 @@
                   <Image url="@anPics/Background3.JPG" />
                </image>
             </ImageView>
-            <Button layoutX="31.0" layoutY="351.0" mnemonicParsing="false" onAction="#switchToDoctorPageback" prefHeight="25.0" prefWidth="73.0" text="Back" />
+            <Button layoutX="31.0" layoutY="351.0" mnemonicParsing="false" onAction="#switchToDoctorPage" prefHeight="25.0" prefWidth="73.0" text="Back" />
             <Label layoutX="25.0" layoutY="24.0" text="Blood Bank">
                <font>
                   <Font name="System Bold" size="24.0" />

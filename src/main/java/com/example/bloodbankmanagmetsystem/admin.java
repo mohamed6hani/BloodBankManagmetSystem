@@ -14,17 +14,14 @@ public class admin extends Person {
         this.adminID = adminID;
     }
 
-    admin(String Name, int adminID, String email, String phonenum) {
+    public admin(String Name, int adminID, String email, String phonenum) {
         super(email);
         this.Name = Name;
         this.adminID = adminID;
         this.phonenum = phonenum;
 
-
     }
-    admin(){
 
-    }
 
     private int adminID;
     private String viewadm = "SELECT * FROM admin ";
@@ -49,19 +46,19 @@ public class admin extends Person {
         return adminlogin;
     }
 
-    ;
+
 
     public String getViewadm() {
         return viewadm;
     }
 
-    ;
+
 
     public String getViewdoc() {
         return viewdoc;
     }
 
-    ;
+
 
     //-------------setters
     public void setAdminID() {

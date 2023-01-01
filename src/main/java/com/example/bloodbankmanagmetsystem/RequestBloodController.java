@@ -43,11 +43,12 @@ public class RequestBloodController implements Initializable {
     Label requestlabel;
 
     @Override
-    public void initialize (URL url, ResourceBundle resourceBundle) throws NullPointerException {
+    public void initialize(URL url, ResourceBundle resourceBundle) throws NullPointerException {
         genderBox.getItems().addAll(Gender);
         bloodTypeBox.getItems().addAll(BloodType);
 
     }
+
     public void switchToDoctorPage(ActionEvent event) throws IOException, NullPointerException {
         Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("DoctorPage.fxml"))));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -58,15 +59,24 @@ public class RequestBloodController implements Initializable {
 
 
     //-----------ADD REQUEST---------
-    public void addRequest(){
+    public void addRequest() {
         bloodRequest br = new bloodRequest();
-       // if(!bloodTypeBox.getValue().isBlank() && !patient_name.getText().isBlank() && !location.getText().isBlank() && !age.getText().isBlank() && !genderBox.getValue().isBlank() && !amount.getText().isBlank()){
-            br.addRequest(date.getValue(), bloodTypeBox.getValue(),location.getText(), patient_name.getText(), age.getText(), genderBox.getValue(), 5);
-            requestlabel.setText("Request Successfully Added!");
+        // if(!bloodTypeBox.getValue().isBlank() && !patient_name.getText().isBlank() && !location.getText().isBlank() && !age.getText().isBlank() && !genderBox.getValue().isBlank() && !amount.getText().isBlank()){
+        br.addRequest(date.getValue(), bloodTypeBox.getValue(), location.getText(), patient_name.getText(), age.getText(), genderBox.getValue(), 5);
+        requestlabel.setText("Request Successfully Added!");
         //}
         //else{
-          //  requestlabel.setText("Please Fill Empty Fields");
+        //  requestlabel.setText("Please Fill Empty Fields");
         //}
 
+    }
+
+    public void switchToDVBB2(ActionEvent event) throws IOException, NullPointerException {
+        Parent fxmlLoader = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("DoctorViewBloodBank.fxml"))));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(fxmlLoader);
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
     }
 }

@@ -1,5 +1,7 @@
 package com.example.bloodbankmanagmetsystem;
 
+import javafx.beans.property.ReadOnlyObjectWrapper;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -19,41 +21,22 @@ import kotlin.jvm.internal.Intrinsics;
 
 import java.io.*;
 import java.net.URL;
+import java.sql.*;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class AdminControllerClass implements Initializable {
+//    @FXML
+//    private TableView<admin> adminsTable;
+//    @FXML
+//    private TableColumn<admin, Integer> adminIDc;
+//    @FXML
+//    private TableColumn <admin, String> adminNamec;
+//    @FXML
+//    private TableColumn  <admin, String> adminEmailc;
+//    @FXML
+//    private TableColumn <admin, String>  adminPhonenumc;
 
-    @FXML
-    private TableView <admin> adminsTable;
-    @FXML
-    private TableColumn <admin, Integer> adminIDc;
-    @FXML
-    private TableColumn <admin, String> adminNamec;
-    @FXML
-    private TableColumn  <admin, String> adminEmailc;
-    @FXML
-    private TableColumn   <admin, String> adminPhonenumc;
-
-    ObservableList <admin> list = FXCollections.observableArrayList(
-     // new admin("Sara Ahmed", 1212, "sara@nu.edu.eg", "121212")
-    );
-    public void vieww(){
-
-
-
-    }
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        adminIDc.setCellValueFactory(new PropertyValueFactory<admin, Integer>("adminID"));
-        adminNamec.setCellValueFactory(new PropertyValueFactory<admin, String>("Name"));
-        adminEmailc.setCellValueFactory(new PropertyValueFactory<admin, String>("email"));
-        adminPhonenumc.setCellValueFactory(new PropertyValueFactory<admin, String>("phonenum"));
-
-        adminsTable.setItems(list);
-
-
-    }
 
 
     public void switchToDoctorCreateAccount(ActionEvent event) throws IOException, NullPointerException {
@@ -87,6 +70,7 @@ public class AdminControllerClass implements Initializable {
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
+
     }
 
 
@@ -98,6 +82,7 @@ public class AdminControllerClass implements Initializable {
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
+
     }
 
     //------view doctors
@@ -109,4 +94,68 @@ public class AdminControllerClass implements Initializable {
         stage.setResizable(false);
         stage.show();
     }
+    public void loadDB(){
+        ObservableList<admin> admindata= FXCollections.observableArrayList();
+        String viewAdmins = "SELECT * FROM admin";
+        try {
+            DB db = new DB();
+            PreparedStatement pstmt = db.getConnection().prepareStatement(viewAdmins);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next())
+            {
+                admindata.add(new admin (
+                        rs.getString("admin_name"),
+                        rs.getInt("admin_id"),
+                        rs.getString("admin_email"),
+                        rs.getString("admin_phonenum")));
+
+            }
+   //         adminsTable.setItems(admindata);
+//          adminNamec.setText(new PropertyValueFactory<admin, String>("Name"));
+//          adminIDc.setCellValueFactory(new PropertyValueFactory ("adminID"));
+//         adminEmailc.setCellValueFactory(new PropertyValueFactory("email"));
+//         adminPhonenumc.setCellValueFactory(new PropertyValueFactory ("phonenum"));
+
+
+        }
+
+
+        catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
+   //ObservableList<admin> admindata= FXCollections.observableArrayList();
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+//        adminNamec.setCellValueFactory(new PropertyValueFactory<admin, String>("Name"));
+//        adminIDc.setCellValueFactory(new PropertyValueFactory ("adminID"));
+//        adminEmailc.setCellValueFactory(new PropertyValueFactory("email"));
+//        adminPhonenumc.setCellValueFactory(new PropertyValueFactory ("phonenum"));
+//        String viewAdmins = "SELECT * FROM admin";
+//        try{
+//            DB db = new DB();
+//            Connection cn = db.getConnection();
+//
+//            Statement stmt = cn.createStatement();
+//            ResultSet rs = stmt.executeQuery(viewAdmins);
+//            while (rs.next())
+//            {
+//                admindata.add(new admin (
+//                        rs.getString("admin_name"),
+//                        rs.getInt("admin_id"),
+//                        rs.getString("admin_email"),
+//                        rs.getString("admin_phonenum")));
+//
+//            }
+//        }
+//        catch (Exception e){
+//            System.out.println(e);
+//        }
+//        adminsTable.setItems(admindata);
+
+  }
 }

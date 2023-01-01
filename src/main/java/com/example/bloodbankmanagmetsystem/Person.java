@@ -10,12 +10,11 @@ public class Person {
         this.password = password;
 
     }
-    Person( String email){
+    Person(String email){
         this.email = email;
 
     }
-    Person(){
-    }
+
     protected String Name;
     protected String email;
     protected String password;

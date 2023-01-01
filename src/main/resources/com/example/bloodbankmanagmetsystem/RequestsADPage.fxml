@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.secondController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.newController">
    <children>
       <AnchorPane prefHeight="418.0" prefWidth="600.0">
          <children>
@@ -24,7 +24,7 @@
                </font>
             </Label>
             <ScrollPane layoutX="20.0" layoutY="55.0" prefHeight="299.0" prefWidth="550.0" />
-            <Button layoutX="22.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchToDoctorPageback" prefHeight="25.0" prefWidth="60.0" text="Back" />
+            <Button layoutX="22.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchToDoctorPage" prefHeight="25.0" prefWidth="60.0" text="Back" />
          </children>
       </AnchorPane>
    </children>
