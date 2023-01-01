@@ -9,15 +9,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.scene.control.Label;
 
 import java.io.*;
 import java.net.URL;
@@ -33,6 +29,9 @@ public class CreateUserAccount implements Initializable {
     public ChoiceBox<String> genderBox;
     @FXML
     private PasswordField pass;
+    @FXML
+    private Button creataccB;
+
 
     @FXML
     private TextField ph;
@@ -41,12 +40,10 @@ public class CreateUserAccount implements Initializable {
 
     @FXML
     private TextField username;
-    @FXML
-    private TextField Nid;
 
     @FXML
     private TextField email;
-    private final String[] Gender = {"Male", "Female"};
+    private final String[] Gender = {"M", "F"};
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         genderBox.getItems().addAll(Gender);
@@ -70,8 +67,8 @@ public class CreateUserAccount implements Initializable {
     }
     public void UserCreateAcc(){
         user k = new user();
-        if(k.UserCreateAcc(pass.getText(), ph.getText(), username.getText(), Nid.getText(), email.getText())){
-            userlabel.setText("User Successfully Added!");
+        if(k.UserCreateAcc(username.getText(),  email.getText() , pass.getText(), ph.getText(), genderBox.getValue())){
+            userlabel.setText("Account Successfully Created!");
         }
         else{
             userlabel.setText("Failed...");

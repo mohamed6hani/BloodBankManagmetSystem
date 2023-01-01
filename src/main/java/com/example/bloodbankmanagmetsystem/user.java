@@ -26,7 +26,7 @@ public class user extends Person{
         DB db=new DB();
         Connection con = db.getConnection();
         try{
-            String userCreateAcc= "INSERT INTO user VALUES ('"+Name+"', '"+email+"', '"+password+"','"+phonenum+"','"+gender+"')";
+            String userCreateAcc= "INSERT INTO user VALUES ('"+Name+"', '"+email+"', '"+password+"','"+gender+"','"+phonenum+"')";
             Statement stmt =con.createStatement();
             stmt.executeUpdate(userCreateAcc);
             return true;
