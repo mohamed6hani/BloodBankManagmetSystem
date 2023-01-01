@@ -20,7 +20,7 @@ public class bloodRequest {
 
     //methods
 
-    public void addRequest(LocalDate date, String bloodType, String location, String patientName, String patientAge,
+    public boolean addRequest(LocalDate date, String bloodType, String location, String patientName, String patientAge,
                            String patientGender,int amount){
 
         DB db = new DB();
@@ -31,8 +31,9 @@ public class bloodRequest {
             Statement stmt = con.createStatement();
             stmt.executeUpdate(placeRequest);
             System.out.println("Success");
-            con.close();
 
+            con.close();
+            return true;
 
 
         } catch (Exception e){
@@ -40,6 +41,7 @@ public class bloodRequest {
             e.getCause();
         }
 
+        return false;
     };
 
 

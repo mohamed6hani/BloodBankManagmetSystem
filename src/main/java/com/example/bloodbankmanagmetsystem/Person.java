@@ -14,6 +14,14 @@ public class Person {
         this.email = email;
 
     }
+//    Person( String Name, String email, String password, String phonenum){
+//        this.email = email;
+//        this.password = password;
+//        this.Name = Name;
+//        this.phonenum = phonenum;
+//
+//    }
+    Person(){}
 
     protected String Name;
     protected String email;

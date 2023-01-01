@@ -14,16 +14,17 @@ public class admin extends Person {
         this.adminID = adminID;
     }
 
-    public admin(String Name, int adminID, String email, String phonenum) {
+    public admin(String Name, String adminID, String email, String phonenum) {
         super(email);
         this.Name = Name;
         this.adminID = adminID;
         this.phonenum = phonenum;
 
     }
+    admin(){}
 
 
-    private int adminID;
+    private String adminID;
     private String viewadm = "SELECT * FROM admin ";
     private String viewdoc = "SELECT * FROM Doctor ";
     private String adminlogin = "SELECT count(1) FROM admin WHERE admin_email = '" + email + "' AND admin_password = '" + password + "'";
@@ -34,7 +35,7 @@ public class admin extends Person {
         return phonenum;
     }
 
-    public int getAdminID() {
+    public String getAdminID() {
         return adminID;
     }
 
@@ -92,8 +93,24 @@ public class admin extends Person {
 
     }
 
+    public boolean adminCreateAcc(String adminID,String Name, String email, String password, String phonenum){
 
-    public void viewDoctors () {}
+        DB db=new DB();
+        Connection con = db.getConnection();
+        try{
+            String docCreateAcc= "INSERT INTO admin VALUES ('"+adminID+"', '"+Name+"', '"+email+"', '"+password+"','"+phonenum+"')";
+            Statement stmt =con.createStatement();
+            stmt.executeUpdate(docCreateAcc);
+            return true;
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            e.getCause();
+        }
+        return false;
+    }
+
+
 
 }
 

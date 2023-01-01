@@ -7,7 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
@@ -20,10 +20,30 @@ import java.util.ResourceBundle;
 
 public class CreateAdminController implements Initializable {
 
+
+    @FXML
+    private Button adminCreateB;
+
+    @FXML
+    private TextField aemailf;
+    @FXML
+    private TextField aidf;
+
+    @FXML
+    private TextField anamef;
+
+    @FXML
+    private TextField aphonenumf;
+    @FXML
+    private Label adminlabel;
+    @FXML
+    private PasswordField apasswordf;
     public ImageView myProfileA;
     @FXML
     public ChoiceBox<String> genderBox;
     private final String[] Gender = {"Male", "Female"};
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         genderBox.getItems().addAll(Gender);
@@ -43,5 +63,16 @@ public class CreateAdminController implements Initializable {
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
+    }
+
+
+    public void adminCreate(){
+        admin a = new admin();
+        if(a.adminCreateAcc(aidf.getText(), anamef.getText(), aemailf.getText(), apasswordf.getText(),  aphonenumf.getText())){
+            adminlabel.setText("Admin Successfully Added!");
+        }
+        else{
+            adminlabel.setText("Failed...");
+        }
     }
 }

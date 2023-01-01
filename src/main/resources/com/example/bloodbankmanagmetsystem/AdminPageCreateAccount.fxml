@@ -4,7 +4,6 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -12,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="428.0" prefWidth="535.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.CreateAdminController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="428.0" prefWidth="535.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.CreateAdminController">
    <AnchorPane focusTraversable="true" prefHeight="421.0" prefWidth="528.0" scaleShape="false">
       <ImageView fitHeight="436.0" fitWidth="551.0" layoutX="-13.0" layoutY="-3.0">
          <Image url="@anPics/Background3.JPG" />
@@ -24,12 +23,11 @@
       <Label layoutX="46.0" layoutY="304.0" text="Password" />
       <Label layoutX="46.0" layoutY="169.0" text="Name" />
       <Label layoutX="43.0" layoutY="221.0" text="ID Number" />
-      <TextField layoutX="43.0" layoutY="186.0" prefHeight="10.0" prefWidth="149.0" />
-      <TextField layoutX="43.0" layoutY="238.0" />
-      <TextField layoutX="44.0" layoutY="279.0" />
-      <PasswordField layoutX="43.0" layoutY="321.0" />
-      <ProgressBar layoutX="176.0" layoutY="372.0" prefHeight="18.0" prefWidth="230.0" progress="0.0" />
-      <Button layoutX="216.0" layoutY="334.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Create Account" />
+      <TextField fx:id="anamef" layoutX="43.0" layoutY="186.0" prefHeight="10.0" prefWidth="149.0" />
+      <TextField fx:id="aidf" layoutX="43.0" layoutY="238.0" />
+      <TextField fx:id="aemailf" layoutX="44.0" layoutY="279.0" />
+      <PasswordField fx:id="apasswordf" layoutX="43.0" layoutY="321.0" />
+      <Button fx:id="adminCreateB" layoutX="195.0" layoutY="384.0" mnemonicParsing="false" onAction="#adminCreate" prefHeight="25.0" prefWidth="149.0" text="Create Account" />
       <Button layoutX="29.0" layoutY="378.0" mnemonicParsing="false" onAction="#switchToAdminPage" prefHeight="25.0" prefWidth="67.0" text="Back" />
       <Label layoutX="405.0" layoutY="180.0" prefHeight="27.0" prefWidth="111.0" text="Profile Photo">
          <font>
@@ -42,5 +40,12 @@
       </ImageView>
       <ChoiceBox fx:id="genderBox" layoutX="269.0" layoutY="181.0" prefHeight="25.0" prefWidth="82.0" />
       <Label layoutX="216.0" layoutY="185.0" text="Gender" />
+      <Label layoutX="216.0" layoutY="221.0" prefHeight="18.0" prefWidth="82.0" text="Phone No." />
+      <TextField fx:id="aphonenumf" layoutX="218.0" layoutY="238.0" />
+      <Label fx:id="adminlabel" layoutX="159.0" layoutY="360.0" prefHeight="23.0" prefWidth="226.0" textFill="#258028">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </AnchorPane>
 </VBox>

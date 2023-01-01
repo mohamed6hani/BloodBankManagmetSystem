@@ -105,7 +105,7 @@ public class AdminControllerClass implements Initializable {
             {
                 admindata.add(new admin (
                         rs.getString("admin_name"),
-                        rs.getInt("admin_id"),
+                        rs.getString("admin_id"),
                         rs.getString("admin_email"),
                         rs.getString("admin_phonenum")));
 
