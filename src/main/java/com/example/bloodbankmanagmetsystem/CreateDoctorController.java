@@ -7,7 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
@@ -19,36 +19,9 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class CreateDoctorController implements Initializable {
-    @FXML
-    private Button createaccB;
-
-    @FXML
-    private TextField emailf;
-
-    @FXML
-    private ChoiceBox<String> genderBox;
-
-    @FXML
-    private TextField hospitalf;
-
-    @FXML
-    private TextField idf;
-
-    @FXML
     public ImageView myProfile;
-
     @FXML
-    private TextField namef;
-
-    @FXML
-    private TextField phonenumf;
-    @FXML
-    private Label doclabel;
-
-
-    @FXML
-    private PasswordField passwordf;
-
+    public ChoiceBox<String> genderBox;
     @FXML
     private final String[] Gender = {"Male", "Female"};
     @Override
@@ -71,15 +44,5 @@ public class CreateDoctorController implements Initializable {
         InputStream image1 = new FileInputStream(String.valueOf(file));
         Image image = new Image(image1);
         myProfile.setImage(image);
-    }
-
-    public void docCreate(){
-        doctor d = new doctor();
-        if(d.DocCreateAcc(idf.getText(), namef.getText(), emailf.getText(), passwordf.getText(), hospitalf.getText(), phonenumf.getText())){
-            doclabel.setText("Doctor Successfully Added!");
-        }
-       else{
-            doclabel.setText("Failed...");
-        }
     }
 }

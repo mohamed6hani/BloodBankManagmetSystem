@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="515.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.CreateUserAccount">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="515.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.CreateUserAccount">
    <AnchorPane prefHeight="480.0" prefWidth="478.0">
       <ImageView fitHeight="406.0" fitWidth="515.0">
          <Image url="@anPics/Background3.JPG" />
@@ -27,23 +27,24 @@
       <Label layoutX="205.0" layoutY="243.0" text="Birthdate" />
       <Label layoutX="205.0" layoutY="164.0" text="Gender" />
       <Label layoutX="204.0" layoutY="190.0" text="Phone Number" />
-      <TextField layoutX="31.0" layoutY="162.0" />
-      <TextField layoutX="31.0" layoutY="208.0" />
-      <TextField layoutX="31.0" layoutY="253.0" />
-      <PasswordField layoutX="31.0" layoutY="305.0" />
-      <TextField layoutX="204.0" layoutY="215.0" />
+      <TextField fx:id="username" layoutX="31.0" layoutY="162.0" />
+      <TextField fx:id="Nid" layoutX="31.0" layoutY="208.0" />
+      <TextField fx:id="email" layoutX="31.0" layoutY="253.0" />
+      <PasswordField fx:id="pass" layoutX="31.0" layoutY="305.0" />
+      <TextField fx:id="ph" layoutX="204.0" layoutY="215.0" />
       <Label layoutX="391.0" layoutY="139.0" prefHeight="27.0" prefWidth="111.0" text="Profile Photo">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
       <Button layoutX="401.0" layoutY="284.0" mnemonicParsing="false" onAction="#singleFileUploadUser" prefHeight="25.0" prefWidth="91.0" text="Upload" />
-      <DatePicker layoutX="205.0" layoutY="260.0" />
+      <DatePicker fx:id="bd" layoutX="205.0" layoutY="260.0" />
       <Button layoutX="210.0" layoutY="370.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" text="Create Account" />
       <Button layoutX="18.0" layoutY="357.0" mnemonicParsing="false" onAction="#switchUserLogin" prefHeight="25.0" prefWidth="74.0" text="Back" />
       <ChoiceBox fx:id="genderBox" layoutX="272.0" layoutY="156.0" prefHeight="25.0" prefWidth="74.0" />
       <ImageView fx:id="myProfileU" fitHeight="104.0" fitWidth="111.0" layoutX="385.0" layoutY="164.0">
          <Image url="@pics/Profile%20Picture1.jpg" />
       </ImageView>
+      <Label fx:id="userlabel" layoutX="206.0" layoutY="348.0" prefHeight="18.0" prefWidth="131.0" />
    </AnchorPane>
 </VBox>

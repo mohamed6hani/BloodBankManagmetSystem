@@ -61,4 +61,5 @@ public class UserControllerClass implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
+
 }

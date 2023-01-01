@@ -1,5 +1,7 @@
 package com.example.bloodbankmanagmetsystem;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,9 +14,16 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
 
 import java.io.*;
 import java.net.URL;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
@@ -22,6 +31,21 @@ public class CreateUserAccount implements Initializable {
     public ImageView myProfileU;
     @FXML
     public ChoiceBox<String> genderBox;
+    @FXML
+    private PasswordField pass;
+
+    @FXML
+    private TextField ph;
+    @FXML
+    private Label userlabel;
+
+    @FXML
+    private TextField username;
+    @FXML
+    private TextField Nid;
+
+    @FXML
+    private TextField email;
     private final String[] Gender = {"Male", "Female"};
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -44,5 +68,15 @@ public class CreateUserAccount implements Initializable {
         stage.setResizable(false);
         stage.show();
     }
+    public void UserCreateAcc(){
+        user k = new user();
+        if(k.UserCreateAcc(pass.getText(), ph.getText(), username.getText(), Nid.getText(), email.getText())){
+            userlabel.setText("User Successfully Added!");
+        }
+        else{
+            userlabel.setText("Failed...");
+        }
 
-}
+    }
+
+    }
