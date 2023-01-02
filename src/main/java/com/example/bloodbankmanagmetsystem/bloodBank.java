@@ -58,7 +58,12 @@ public class bloodBank implements Initializable {
     };
 
 
-    public void upadateAmount(){};
+    public String upadateAmount(String addedAmount){
+        int newBloodAmount = Integer.valueOf(getBloodAmount()) + Integer.valueOf(addedAmount) ;
+        String newBA = String.valueOf(newBloodAmount);
+        return newBA;
+
+    };
 
 
 

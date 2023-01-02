@@ -41,7 +41,7 @@ public class CreateAdminController implements Initializable {
     public ImageView myProfileA;
     @FXML
     public ChoiceBox<String> genderBox;
-    private final String[] Gender = {"Male", "Female"};
+    private final String[] Gender = {"M", "F"};
 
 
     @Override

@@ -4,7 +4,6 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -12,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="621.0" scaleShape="false" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.CreateDoctorController">
+<VBox fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="621.0" scaleShape="false" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.CreateDoctorController">
    <AnchorPane focusTraversable="true" prefHeight="384.0" prefWidth="562.0" scaleShape="false">
       <ImageView fitHeight="433.0" fitWidth="621.0" layoutY="11.0">
          <Image url="@anPics/Background3.JPG" />
@@ -20,16 +19,15 @@
       <ImageView fitHeight="167.0" fitWidth="426.0" layoutX="104.0" layoutY="4.0">
          <Image url="@pics/Logo3.png" />
       </ImageView>
-      <Label layoutX="68.0" layoutY="296.0" text="Email" />
-      <Label layoutX="72.0" layoutY="341.0" text="Password" />
-      <Label layoutX="72.0" layoutY="193.0" text="Name" />
-      <Label layoutX="69.0" layoutY="245.0" text="ID Number" />
-      <TextField layoutX="69.0" layoutY="210.0" prefHeight="10.0" prefWidth="149.0" />
-      <TextField layoutX="69.0" layoutY="262.0" />
-      <TextField layoutX="69.0" layoutY="312.0" />
-      <PasswordField layoutX="69.0" layoutY="358.0" />
-      <ProgressBar layoutX="196.0" layoutY="400.0" prefHeight="18.0" prefWidth="230.0" progress="0.0" />
-      <Button layoutX="236.0" layoutY="371.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Create Account" />
+      <Label layoutX="61.0" layoutY="261.0" text="Email" />
+      <Label layoutX="65.0" layoutY="306.0" text="Password" />
+      <Label layoutX="65.0" layoutY="158.0" text="Name" />
+      <Label layoutX="62.0" layoutY="210.0" text="ID Number" />
+      <TextField fx:id="dname" layoutX="62.0" layoutY="175.0" prefHeight="10.0" prefWidth="149.0" />
+      <TextField fx:id="did" layoutX="62.0" layoutY="227.0" />
+      <TextField fx:id="demail" layoutX="62.0" layoutY="277.0" />
+      <PasswordField fx:id="dpassword" layoutX="62.0" layoutY="323.0" />
+      <Button fx:id="dcreateAcc" layoutX="229.0" layoutY="384.0" mnemonicParsing="false" onAction="#doctorCreate" prefHeight="25.0" prefWidth="149.0" text="Create Account" />
       <Button layoutX="14.0" layoutY="396.0" mnemonicParsing="false" onAction="#switchToAdminPage" prefHeight="25.0" prefWidth="67.0" text="Back" />
       <Label layoutX="453.0" layoutY="180.0" prefHeight="27.0" prefWidth="111.0" text="Profile Photo">
          <font>
@@ -40,7 +38,16 @@
       <ImageView fx:id="myProfile" fitHeight="150.0" fitWidth="164.0" layoutX="426.0" layoutY="212.0">
          <Image url="@pics/Profile%20Picture1.jpg" />
       </ImageView>
-      <ChoiceBox fx:id="genderBox" layoutX="296.0" layoutY="206.0" prefHeight="25.0" prefWidth="82.0" />
-      <Label layoutX="243.0" layoutY="210.0" text="Gender" />
+      <ChoiceBox fx:id="genderBox" layoutX="297.0" layoutY="167.0" prefHeight="25.0" prefWidth="82.0" />
+      <Label layoutX="244.0" layoutY="171.0" text="Gender" />
+      <Label layoutX="244.0" layoutY="206.0" text="Hospital" />
+      <TextField fx:id="dhospital" layoutX="244.0" layoutY="223.0" />
+      <Label layoutX="244.0" layoutY="257.0" prefHeight="17.0" prefWidth="67.0" text="Phone No." />
+      <TextField fx:id="dphonenum" layoutX="244.0" layoutY="274.0" />
+      <Label fx:id="dlabel" layoutX="201.0" layoutY="362.0" prefHeight="23.0" prefWidth="212.0" textFill="#287c2f">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </AnchorPane>
 </VBox>
