@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -18,13 +22,60 @@
                   <Image url="@anPics/Background3.JPG" />
                </image>
             </ImageView>
-            <Label layoutX="48.0" layoutY="14.0" text="Request: ">
+            <Label layoutX="48.0" layoutY="14.0" text="Requests Available: ">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <ScrollPane layoutX="20.0" layoutY="55.0" prefHeight="299.0" prefWidth="550.0" />
             <Button layoutX="22.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchToDoctorPage" prefHeight="25.0" prefWidth="60.0" text="Back" />
+            <HBox layoutX="32.0" layoutY="47.0" prefHeight="26.0" prefWidth="543.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="22.0" prefWidth="81.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="22.0" prefWidth="81.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <Label prefHeight="22.0" prefWidth="85.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="18.0" />
+                     </padding>
+                  </Label>
+                  <Label prefHeight="22.0" prefWidth="87.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Button fx:id="acceptButton" layoutX="128.0" layoutY="339.0" mnemonicParsing="false" onAction="#acceptButtonAction" prefWidth="141.0" style="-fx-background-color: #50C878;" text="ACCEPT">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <ColorAdjust brightness="-0.38" contrast="0.26" />
+               </effect>
+            </Button>
+            <Button fx:id="denyButton" layoutX="351.0" layoutY="339.0" mnemonicParsing="false" onAction="#denyButtonAction" prefWidth="141.0" style="-fx-background-color: #AA4A44;" text="DENY" />
+            <TableView fx:id="tv" layoutX="36.0" layoutY="47.0" prefHeight="279.0" prefWidth="535.0">
+              <columns>
+                <TableColumn fx:id="namec" prefWidth="117.0" text="Donor Name" />
+                  <TableColumn fx:id="emailc" prefWidth="92.0" text="Donor Email" />
+                  <TableColumn fx:id="btc" prefWidth="96.0" text="Blood Type" />
+                  <TableColumn fx:id="clc" minWidth="0.0" prefWidth="94.0" text="Chronic Illness" />
+                  <TableColumn fx:id="ldc" minWidth="5.0" prefWidth="135.0" text="Last Donation" />
+              </columns>
+            </TableView>
          </children>
       </AnchorPane>
    </children>

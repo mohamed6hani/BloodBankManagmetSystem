@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.UserControllerClass">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.UserControllerClass">
    <children>
       <AnchorPane prefHeight="408.0" prefWidth="600.0">
          <children>
@@ -41,7 +41,7 @@
                      </columns>
                   </TableView>
                </children></Pane>
-            <Label layoutX="135.0" layoutY="14.0" text="User">
+            <Label layoutX="120.0" layoutY="14.0" text="User">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
