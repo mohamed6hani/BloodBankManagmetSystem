@@ -98,7 +98,7 @@ public class admin extends Person {
         DB db=new DB();
         Connection con = db.getConnection();
         try{
-            String docCreateAcc= "INSERT INTO admin VALUES ('"+adminID+"', '"+Name+"', '"+email+"', '"+password+"','"+phonenum+"')";
+            String docCreateAcc= "INSERT INTO admin VALUES ('"+adminID+"', '"+Name+"', '"+email+"', '"+password+"','"+phonenum+")";
             Statement stmt =con.createStatement();
             stmt.executeUpdate(docCreateAcc);
             return true;

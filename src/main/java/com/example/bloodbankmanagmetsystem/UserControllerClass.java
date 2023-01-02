@@ -28,6 +28,9 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class UserControllerClass implements Initializable {
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
 
 
     public static TableView<donationRequests> table_info_app;
@@ -131,9 +134,6 @@ public class UserControllerClass implements Initializable {
 
     }
 
-    private void ActionButton(ActionEvent event) {
-        System.out.println("test");
-    }
     private void loadData() {
         data_table = FXCollections.observableArrayList();
         //DB trail
@@ -155,17 +155,16 @@ public class UserControllerClass implements Initializable {
 
 
         // change here with DB table size instead of 12 below
-      //  for (int x = 1; x < 12; x++) {
-         //   data_table.add(new donationRequests(String.valueOf(x), "Yasmin " , "age" , "bloodGroup " , "unit " , "hospitalName " , "gender " , "date ",new Button()));
+        //  for (int x = 1; x < 12; x++) {
+        //   data_table.add(new donationRequests(String.valueOf(x), "Yasmin " , "age" , "bloodGroup " , "unit " , "hospitalName " , "gender " , "date ",new Button()));
         //}
-
         table_info.setItems(data_table);
         addButtonToTable();
 
     }
 
 
-        public void switchToUserSetting(ActionEvent event) throws IOException, NullPointerException{
+    public void switchToUserSetting(ActionEvent event) throws IOException, NullPointerException{
         Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("UserSetting.fxml"))));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
@@ -207,7 +206,7 @@ public class UserControllerClass implements Initializable {
     }
 
     public void switchDonorInfo(ActionEvent event) throws IOException, NullPointerException{
-        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("UserPage.fxml"))));
+        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("userInfo.fxml"))));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
