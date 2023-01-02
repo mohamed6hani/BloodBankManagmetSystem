@@ -20,6 +20,10 @@ import javafx.util.Callback;
 
 import java.io.*;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
@@ -132,10 +136,28 @@ public class UserControllerClass implements Initializable {
     }
     private void loadData() {
         data_table = FXCollections.observableArrayList();
-        // change here with DB table size instead of 12 below
-        for (int x = 1; x < 12; x++) {
-            data_table.add(new donationRequests(String.valueOf(x), "Yasmin " , "age" , "bloodGroup " , "unit " , "hospitalName " , "gender " , "date ",new Button()));
+        //DB trail
+        try {
+            DB db = new DB();
+            Connection con = db.getConnection();
+            Statement stmt = con.createStatement();
+            ResultSet query = stmt.executeQuery("SELECT * FROM BloodRequests ");
+            int i = 0;
+            while (query.next()) {
+                data_table.add(new donationRequests(String.valueOf(i), query.getString("patient_name"),query.getString("patient_age") , query.getString("BloodType"), query.getString("amount_in_units"), query.getString("location"), query.getString("patient_gender"), query.getString("date"), new Button()));
+                i += 1;
+            }
         }
+        catch (SQLException e){
+            System.out.println(e.getCause());
+        }
+
+
+
+        // change here with DB table size instead of 12 below
+      //  for (int x = 1; x < 12; x++) {
+         //   data_table.add(new donationRequests(String.valueOf(x), "Yasmin " , "age" , "bloodGroup " , "unit " , "hospitalName " , "gender " , "date ",new Button()));
+        //}
 
         table_info.setItems(data_table);
         addButtonToTable();
@@ -143,7 +165,7 @@ public class UserControllerClass implements Initializable {
     }
 
 
-    public void switchToUserSetting(ActionEvent event) throws IOException, NullPointerException{
+        public void switchToUserSetting(ActionEvent event) throws IOException, NullPointerException{
         Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("UserSetting.fxml"))));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
