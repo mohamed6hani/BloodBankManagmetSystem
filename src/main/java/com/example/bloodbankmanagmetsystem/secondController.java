@@ -33,24 +33,6 @@ public class secondController  implements Initializable {
     private TextField login_email;
     @FXML
     private PasswordField login_password;
-    //blood bank labels
-    @FXML
-    private Label aposl;
-    @FXML
-    private Label bposl;
-    @FXML
-    private Label abposl;
-    @FXML
-    private Label oposl;
-    @FXML
-    private Label anegl;
-    @FXML
-    private Label abnegl;
-    @FXML
-    private Label bnegl;
-    @FXML
-    private Label onegl;
-
 
     private Stage stage;
     private Scene scene;
@@ -131,30 +113,6 @@ public class secondController  implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        bloodBank bbapos = new bloodBank("A+");
-        bbapos.viewBloodBank(aposl);
-
-        bloodBank bbaneg = new bloodBank("A-");
-        bbaneg.viewBloodBank(anegl);
-
-        bloodBank bbbpos = new bloodBank("B+");
-        bbbpos.viewBloodBank(bposl);
-
-        bloodBank bbbneg = new bloodBank("B-");
-        bbbneg.viewBloodBank(bnegl);
-
-        bloodBank bbabpos = new bloodBank("AB+");
-        bbabpos.viewBloodBank(abposl);
-
-        bloodBank bbabneg = new bloodBank("AB-");
-        bbabneg.viewBloodBank(abnegl);
-
-        bloodBank bbopos = new bloodBank("O+");
-        bbopos.viewBloodBank(oposl);
-
-        bloodBank bboneg = new bloodBank("O-");
-        bboneg.viewBloodBank(onegl);
-
 
 
 

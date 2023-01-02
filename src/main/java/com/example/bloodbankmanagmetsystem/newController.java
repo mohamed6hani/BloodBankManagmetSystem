@@ -24,28 +24,6 @@ import java.util.ResourceBundle;
 
 
 public class newController implements Initializable {
-
-
-    @FXML
-    private TableColumn<Donors, String> btc;
-
-    @FXML
-    private TableColumn<Donors, String> clc;
-
-    @FXML
-    private Button denyButton;
-
-    @FXML
-    private TableColumn<Donors, String> emailc;
-
-    @FXML
-    private TableColumn<Donors, String> ldc;
-
-    @FXML
-    private TableColumn<Donors, String> namec;
-
-
-
     @FXML
     private Label aposl;
     @FXML
@@ -63,12 +41,6 @@ public class newController implements Initializable {
     @FXML
     private Label onegl;
 
-    ObservableList<Donors> donorData= FXCollections.observableArrayList();
-    @FXML
-    TableView <Donors> tv;
-
-    @FXML
-    Button acceptButton;
 
 
     public void switchToDoctorPage(ActionEvent event) throws IOException, NullPointerException {
@@ -78,101 +50,35 @@ public class newController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-    public void acceptButtonAction(){
-        tv.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, newValue) -> {
-            newValue.setStatus("accepted");
-            System.out.println("Selected Person: " +  newValue.getStatus());
-            //updating value in db
-            DB db = new DB();
-            Connection conn = db.getConnection();
-            String query1 = "SELECT * FROM Donors";
-            String email = newValue.getEmail();
-            String query2 = "UPDATE Donors SET status = '"+"accepted"+"' WHERE Donors_email = '"+newValue.getEmail()+"'";
-            try {
-                Statement stmt = conn.createStatement();
-                ResultSet queryResult = stmt.executeQuery(query1);
 
-                while (queryResult.next()) {
-                    if(queryResult.getString("Donors_email").compareTo(newValue.getEmail())==0){
-                        System.out.println("Entered");
-                        PreparedStatement pstmt = conn.prepareStatement(query2);
-                        pstmt.executeUpdate();
-                        System.out.println("Success...");
-                    }
-
-                }
-
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
-        });
-    }
-
-    public void denyButtonAction(){
-        tv.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, newValue) -> {
-            newValue.setStatus("denied");
-            System.out.println("Selected Person: " +  newValue.getStatus());
-            //updating value in db
-            DB db = new DB();
-            Connection conn = db.getConnection();
-            String query1 = "SELECT * FROM Donors";
-            String email = newValue.getEmail();
-            String query2 = "UPDATE Donors SET status = '"+"denied"+"' WHERE Donors_email = '"+newValue.getEmail()+"'";
-            try {
-                Statement stmt = conn.createStatement();
-                ResultSet queryResult = stmt.executeQuery(query1);
-
-                while (queryResult.next()) {
-                    if(queryResult.getString("Donors_email").compareTo(newValue.getEmail())==0){
-                        System.out.println("Entered");
-                        PreparedStatement pstmt = conn.prepareStatement(query2);
-                        pstmt.executeUpdate();
-                        System.out.println("Success...");
-                    }
-                }
-
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
-        });
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        bloodBank bbapos = new bloodBank("A+");
+        bbapos.viewBloodBank(aposl);
 
-//
+        bloodBank bbaneg = new bloodBank("A-");
+        bbaneg.viewBloodBank(anegl);
 
-        namec.setCellValueFactory(new PropertyValueFactory<Donors, String>("Name"));
-        ldc.setCellValueFactory(new PropertyValueFactory<Donors, String>("lastDonation"));
-        emailc.setCellValueFactory(new PropertyValueFactory<Donors, String>("email"));
-        btc.setCellValueFactory(new PropertyValueFactory<Donors, String>("bloodType"));
-        clc.setCellValueFactory(new PropertyValueFactory<Donors, String>("chronicIllness"));
+        bloodBank bbbpos = new bloodBank("B+");
+        bbbpos.viewBloodBank(bposl);
 
-        DB db = new DB();
-        Connection conn = db.getConnection();
-        String query = "SELECT * FROM Donors";
-        try {
-            Statement stmt = conn.createStatement();
-            ResultSet queryResult = stmt.executeQuery(query);
-            while (queryResult.next()) {
-                Donors d = new Donors(
-                        queryResult.getString("Donors_name"),
-                        queryResult.getString("Donors_email"),
-                        queryResult.getString("blood_type"),
-                        queryResult.getString("status"),
-                        queryResult.getString("chronicillness"),
-                        queryResult.getString("lastDonation")
-                );
-                donorData.add(d);
+        bloodBank bbbneg = new bloodBank("B-");
+        bbbneg.viewBloodBank(bnegl);
 
-            }
+        bloodBank bbabpos = new bloodBank("AB+");
+        bbabpos.viewBloodBank(abposl);
 
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        tv.setItems(donorData);
+        bloodBank bbabneg = new bloodBank("AB-");
+        bbabneg.viewBloodBank(abnegl);
+
+        bloodBank bbopos = new bloodBank("O+");
+        bbopos.viewBloodBank(oposl);
+
+        bloodBank bboneg = new bloodBank("O-");
+        bboneg.viewBloodBank(onegl);
 
 
 
- }
+    }
 }
