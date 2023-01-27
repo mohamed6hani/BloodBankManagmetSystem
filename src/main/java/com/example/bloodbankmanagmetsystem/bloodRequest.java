@@ -20,12 +20,11 @@ public class bloodRequest {
 
     //methods
 
-    public boolean addRequest(LocalDate date, String bloodType, String location, String patientName, String patientAge,
-                           String patientGender,int amount){
+    public boolean addRequest(LocalDate date, String bloodType, String locationr,int amount){
 
         DB db = new DB();
         Connection con = db.getConnection();
-        String placeRequest = "INSERT INTO BloodRequests (BloodType, date, location, amount_in_units, patient_name, patient_gender, patient_age) VALUES ('"+bloodType+"', '"+date+"', '"+location+"', "+amount+", '"+patientName+"','"+patientGender+"', "+patientAge+")";
+        String placeRequest = "INSERT INTO BloodRequests (BloodType, date, location, amount_in_units) VALUES ('"+bloodType+"', '"+date+"', '"+location+"', "+amount+")";
 
         try {
             Statement stmt = con.createStatement();

@@ -30,17 +30,6 @@
       <Label layoutX="40.0" layoutY="173.0" text="Date" />
       <TextField fx:id="amount" layoutX="38.0" layoutY="257.0" />
       <Label layoutX="40.0" layoutY="234.0" text="Amount" />
-      <TextField fx:id="patient_name" layoutX="338.0" layoutY="196.0" />
-      <Label layoutX="340.0" layoutY="226.0" text="Age" />
-      <TextField fx:id="age" layoutX="338.0" layoutY="255.0" />
-      <Label layoutX="337.0" layoutY="171.0" text="Name" />
-      <ChoiceBox fx:id="genderBox" layoutX="411.0" layoutY="138.0" prefHeight="25.0" prefWidth="82.0" />
-      <Label layoutX="337.0" layoutY="142.0" text="Gender" />
-      <Label layoutX="337.0" layoutY="85.0" text="Patient Info">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-      </Label>
       <Button layoutX="27.0" layoutY="350.0" mnemonicParsing="false" onAction="#switchToDoctorPage" prefHeight="25.0" prefWidth="76.0" text="Back" />
       <Label fx:id="requestlabel" layoutX="185.0" layoutY="321.0" prefHeight="22.0" prefWidth="283.0" textFill="#649a4e">
          <font>

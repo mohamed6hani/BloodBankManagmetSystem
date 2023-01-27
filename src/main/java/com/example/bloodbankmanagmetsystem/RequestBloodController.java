@@ -23,9 +23,6 @@ public class RequestBloodController implements Initializable {
     public ChoiceBox<String> genderBox;
     @FXML
     private final String[] BloodType = {"A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"};
-    @FXML
-    private final String[] Gender = {"M", "F"};
-
 
     @FXML
     TextField location;
@@ -33,10 +30,7 @@ public class RequestBloodController implements Initializable {
     DatePicker date;
     @FXML
     TextField amount;
-    @FXML
-    TextField patient_name;
-    @FXML
-    TextField age;
+
     @FXML
     Button send;
     @FXML
@@ -44,8 +38,7 @@ public class RequestBloodController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) throws NullPointerException {
-        genderBox.getItems().addAll(Gender);
-        bloodTypeBox.getItems().addAll(BloodType);
+
 
     }
 
@@ -62,7 +55,7 @@ public class RequestBloodController implements Initializable {
     public void addRequest() {
         bloodRequest br = new bloodRequest();
         // if(!bloodTypeBox.getValue().isBlank() && !patient_name.getText().isBlank() && !location.getText().isBlank() && !age.getText().isBlank() && !genderBox.getValue().isBlank() && !amount.getText().isBlank()){
-        if(br.addRequest(date.getValue(), bloodTypeBox.getValue(), location.getText(), patient_name.getText(), age.getText(), genderBox.getValue(), 5)){
+        if(br.addRequest(date.getValue(), bloodTypeBox.getValue(), location.getText(), 5)){
             requestlabel.setText("Request Successfully Added!");
         }
         else{

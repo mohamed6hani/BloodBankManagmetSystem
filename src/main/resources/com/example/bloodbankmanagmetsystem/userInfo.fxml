@@ -8,11 +8,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="donor_info" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.DonorInfoController">
+<AnchorPane fx:id="donor_info" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.DonorInfoController">
     <children>
         <Button fx:id="return_to_home" layoutX="246.0" layoutY="347.0" mnemonicParsing="false" onAction="#switchToHomePage" prefHeight="38.0" prefWidth="94.0" text="OK" />
 
-        <MenuButton layoutX="340.0" layoutY="92.0" mnemonicParsing="false" text="choose">
+        <MenuButton fx:id="bgroup" layoutX="340.0" layoutY="92.0" mnemonicParsing="false" text="choose">
             <items>
                 <MenuItem fx:id="menu1" mnemonicParsing="false" text="A+" />
                 <MenuItem fx:id="menu2" mnemonicParsing="false" text="A-" />
@@ -34,7 +34,7 @@
             </font>
         </Label>
         <TextField fx:id="illness_text" layoutX="340.0" layoutY="179.0" prefHeight="26.0" prefWidth="214.0" />
-        <MenuButton layoutX="340.0" layoutY="268.0" mnemonicParsing="false" text="choose">
+        <MenuButton fx:id="whenid" layoutX="340.0" layoutY="268.0" mnemonicParsing="false" text="choose">
             <items>
                 <MenuItem fx:id="q1" mnemonicParsing="false" text="never" />
                 <MenuItem fx:id="q2" mnemonicParsing="false" text="less than 2 months" />
