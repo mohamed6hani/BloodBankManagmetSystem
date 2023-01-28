@@ -50,8 +50,7 @@ public class Person {
 
 
         } catch (Exception e){
-            e.printStackTrace();
-            e.getCause();
+            throw new RuntimeException("unhandled", e);
         }
 
         return false;

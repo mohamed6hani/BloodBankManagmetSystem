@@ -12,16 +12,20 @@ public class donationRequests {
 
 
     /* Constructors */
-    public donationRequests(String id, String name, String age, String bloodGroup, String unit, String hospitalName, String gender, String date, Button approve) {
+    public donationRequests(String id,
+                            //String name, String age,
+                             String bloodGroup, String unit, String hospitalName,
+                            //String gender,
+                            String date, Button approve) {
         this.id = id;
-        this.name = name;
-        this.age = age;
+        //this.name = name;
+        //this.age = age;
         this.bloodGroup = bloodGroup;
         this.approve = approve;
         this.approve.setText("Donate");
         this.unit = unit;
         this.hospitalName = hospitalName;
-        this.gender = gender;
+        //this.gender = gender;
         this.date = date;
 
         approve.setOnAction(e -> {
@@ -30,11 +34,11 @@ public class donationRequests {
             for (donationRequests user : requestDonate) {
                 if (user.getApprove() == approve) {
                     System.out.println("id: " + user.getId());
-                    System.out.println("name: " + user.getName());
-                    System.out.println("age: " + user.getAge());
+                    //System.out.println("name: " + user.getName());
+                    //System.out.println("age: " + user.getAge());
                     System.out.println("bloodGroup: " + user.getBloodGroup());
                     System.out.println("unit: " + user.getUnit());
-                    System.out.println("gender: " + user.getGender());
+                   // System.out.println("gender: " + user.getGender());
                     System.out.println("hospitalName: " + user.getHospitalName());
                     System.out.println("date: " + user.getDate());
                 }

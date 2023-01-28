@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.UserControllerClass">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bloodbankmanagmetsystem.UserControllerClass">
    <children>
       <AnchorPane prefHeight="408.0" prefWidth="600.0">
          <children>
@@ -29,19 +29,16 @@
                <children>
                   <TableView fx:id="table_info" prefHeight="364.0" prefWidth="658.0">
                      <columns>
-                        <TableColumn fx:id="col_id" prefWidth="20.800048828125" text="ID" />
-                        <TableColumn fx:id="col_name" prefWidth="96.800048828125" text="patient name" />
-                        <TableColumn fx:id="col_age" prefWidth="43.199951171875" text="Age" />
-                        <TableColumn fx:id="col_gender" prefWidth="67.20001220703125" text="Gender" />
-                        <TableColumn fx:id="col_bloodGroup" prefWidth="79.20001220703125" text="blood group" />
-                        <TableColumn fx:id="col_unit" prefWidth="61.60003662109375" text="unit (ml)" />
-                        <TableColumn fx:id="col_date" prefWidth="79.20001220703125" text="Date" />
-                        <TableColumn fx:id="col_hospitalName" prefWidth="133.5999755859375" text="Hosiptal name" />
+                        <TableColumn fx:id="col_id" prefWidth="69.0" text="ID" />
+                        <TableColumn fx:id="col_bloodGroup" minWidth="0.0" prefWidth="136.5" text="blood group" />
+                        <TableColumn fx:id="col_unit" prefWidth="158.0" text="unit (ml)" />
+                        <TableColumn fx:id="col_date" prefWidth="110.5" text="Date" />
+                        <TableColumn fx:id="col_hospitalName" minWidth="4.0" prefWidth="183.0" text="Hosiptal name" />
 
                      </columns>
                   </TableView>
                </children></Pane>
-            <Label layoutX="135.0" layoutY="14.0" text="User">
+            <Label layoutX="120.0" layoutY="14.0" text="User">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>

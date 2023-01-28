@@ -18,7 +18,7 @@ public class DB {
             conlink = (Connection) DriverManager.getConnection(host, username, pass);
 
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            throw new RuntimeException("unhandled", e);
 
         }
 

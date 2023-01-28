@@ -131,6 +131,7 @@ public class adController implements Initializable {
 
         DB db = new DB();
         Connection conn = db.getConnection();
+        System.out.println("testt");
         String query = "SELECT * FROM Donors";
         try {
             Statement stmt = conn.createStatement();

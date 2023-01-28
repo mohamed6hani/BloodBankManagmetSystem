@@ -28,9 +28,6 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class UserControllerClass implements Initializable {
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
 
 
     public static TableView<donationRequests> table_info_app;
@@ -38,7 +35,11 @@ public class UserControllerClass implements Initializable {
     @FXML
     private TableView<donationRequests> table_info;
     @FXML
-    private TableColumn<donationRequests, String> col_id, col_name, col_age, col_bloodGroup, col_unit, col_hospitalName, col_gender, col_date;
+    private TableColumn<donationRequests, String> col_id,
+            //col_name, col_age,
+            col_bloodGroup, col_unit, col_hospitalName,
+                    //col_gender,
+                    col_date;
     @FXML
     private TableColumn<donationRequests, Button> col_approve;
 
@@ -54,12 +55,12 @@ public class UserControllerClass implements Initializable {
     private void initializeCols() {
 
         col_id.setCellValueFactory(new PropertyValueFactory<>("id"));
-        col_name.setCellValueFactory(new PropertyValueFactory<>("name"));
-        col_age.setCellValueFactory(new PropertyValueFactory<>("age"));
+        //col_name.setCellValueFactory(new PropertyValueFactory<>("name"));
+        //col_age.setCellValueFactory(new PropertyValueFactory<>("age"));
         col_bloodGroup.setCellValueFactory(new PropertyValueFactory<>("bloodGroup"));
         col_unit.setCellValueFactory(new PropertyValueFactory<>("unit"));
         col_hospitalName.setCellValueFactory(new PropertyValueFactory<>("hospitalName"));
-        col_gender.setCellValueFactory(new PropertyValueFactory<>("gender"));
+        //col_gender.setCellValueFactory(new PropertyValueFactory<>("gender"));
         col_date.setCellValueFactory(new PropertyValueFactory<>("date"));
         //col_approve.setCellValueFactory(new PropertyValueFactory<>("Donate"));
         editableCols();
@@ -69,11 +70,11 @@ public class UserControllerClass implements Initializable {
         col_id.setCellFactory(TextFieldTableCell.forTableColumn());
         col_id.setOnEditCommit(e -> e.getTableView().getItems().get(e.getTablePosition().getRow()).setId(e.getNewValue()));
 
-        col_name.setCellFactory(TextFieldTableCell.forTableColumn());
-        col_name.setOnEditCommit(e -> e.getTableView().getItems().get(e.getTablePosition().getRow()).setName(e.getNewValue()));
+      //  col_name.setCellFactory(TextFieldTableCell.forTableColumn());
+        //col_name.setOnEditCommit(e -> e.getTableView().getItems().get(e.getTablePosition().getRow()).setName(e.getNewValue()));
 
-        col_age.setCellFactory(TextFieldTableCell.forTableColumn());
-        col_age.setOnEditCommit(e -> e.getTableView().getItems().get(e.getTablePosition().getRow()).setAge(e.getNewValue()));
+        //col_age.setCellFactory(TextFieldTableCell.forTableColumn());
+        //col_age.setOnEditCommit(e -> e.getTableView().getItems().get(e.getTablePosition().getRow()).setAge(e.getNewValue()));
 
         col_bloodGroup.setCellFactory(TextFieldTableCell.forTableColumn());
         col_bloodGroup.setOnEditCommit(e -> e.getTableView().getItems().get(e.getTablePosition().getRow()).setBloodGroup(e.getNewValue()));
@@ -134,6 +135,9 @@ public class UserControllerClass implements Initializable {
 
     }
 
+    private void ActionButton(ActionEvent event) {
+        System.out.println("test");
+    }
     private void loadData() {
         data_table = FXCollections.observableArrayList();
         //DB trail
@@ -144,7 +148,12 @@ public class UserControllerClass implements Initializable {
             ResultSet query = stmt.executeQuery("SELECT * FROM BloodRequests ");
             int i = 0;
             while (query.next()) {
-                data_table.add(new donationRequests(String.valueOf(i), query.getString("patient_name"),query.getString("patient_age") , query.getString("BloodType"), query.getString("amount_in_units"), query.getString("location"), query.getString("patient_gender"), query.getString("date"), new Button()));
+                data_table.add(new donationRequests(String.valueOf(i),
+                        //query.getString("patient_name"),query.getString("patient_age")
+                        query.getString("BloodType"), query.getString("amount_in_units"),
+                        query.getString("location"),
+                        //query.getString("patient_gender"),
+                        query.getString("date"), new Button()));
                 i += 1;
             }
         }
@@ -155,16 +164,17 @@ public class UserControllerClass implements Initializable {
 
 
         // change here with DB table size instead of 12 below
-        //  for (int x = 1; x < 12; x++) {
-        //   data_table.add(new donationRequests(String.valueOf(x), "Yasmin " , "age" , "bloodGroup " , "unit " , "hospitalName " , "gender " , "date ",new Button()));
+      //  for (int x = 1; x < 12; x++) {
+         //   data_table.add(new donationRequests(String.valueOf(x), "Yasmin " , "age" , "bloodGroup " , "unit " , "hospitalName " , "gender " , "date ",new Button()));
         //}
+
         table_info.setItems(data_table);
         addButtonToTable();
 
     }
 
 
-    public void switchToUserSetting(ActionEvent event) throws IOException, NullPointerException{
+        public void switchToUserSetting(ActionEvent event) throws IOException, NullPointerException{
         Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("UserSetting.fxml"))));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
@@ -206,7 +216,7 @@ public class UserControllerClass implements Initializable {
     }
 
     public void switchDonorInfo(ActionEvent event) throws IOException, NullPointerException{
-        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("userInfo.fxml"))));
+        Parent root = FXMLLoader.load((Objects.requireNonNull(getClass().getResource("UserPage.fxml"))));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
